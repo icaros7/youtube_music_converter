@@ -27,4 +27,19 @@
     <data name="str_target" xml:space="preserve">
         <value>Target File : </value>
     </data>
+    <data name="str_help_1" xml:space="preserve">
+        <value>1. Make empty text file to use queue</value>
+    </data>
+    <data name="str_help_2" xml:space="preserve">
+        <value>2. In the file, write the address in the format supported by VideoLibraray (eg Youtube) separated by a newline.</value>
+    </data>
+    <data name="str_help_3" xml:space="preserve">
+        <value>3. Drag and drop the txt file to the executable file or execute it through the command example below.</value>
+    </data>
+    <data name="str_help_4" xml:space="preserve">
+        <value>$ EXECUTABLE_FILE YOUR_OWN_FILE.txt</value>
+    </data>
+    <data name="str_help_5" xml:space="preserve">
+        <value>If you want to read more information or help, please visit My Github.</value>
+    </data>
 </root>
