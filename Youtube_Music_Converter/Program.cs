@@ -68,13 +68,15 @@ namespace Youtube_Music_Converter
                 }
     
                 Console.WriteLine(Str.str_target + args);
+                Console.WriteLine();
                 this.path = System.Environment.CurrentDirectory + @"\" + args.Replace(@".txt", @"");
             }
 
             public void ShowQueue()
             {
-                Console.WriteLine(Str.str_show_queue);
                 Console.WriteLine(@"-----------------------------");
+                Console.WriteLine(Str.str_show_queue);
+                Console.WriteLine();
                 foreach (string s in _url)
                 {
                     Console.WriteLine(s);
@@ -120,7 +122,7 @@ namespace Youtube_Music_Converter
                     Console.ReadKey();
                 }
 
-                Console.WriteLine(@"-----------------------------");
+                Console.WriteLine(@"-----------------------------" + "\n");
                 Console.WriteLine(Str.str_end);
                 return;
             }
