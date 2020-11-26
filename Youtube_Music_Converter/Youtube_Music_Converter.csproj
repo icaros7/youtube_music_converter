@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <AssemblyVersion>v1</AssemblyVersion>
+        <FileVersion>v1</FileVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="str.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>str.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="str.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>str.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="VideoLibrary" Version="3.0.8" />
+    </ItemGroup>
+
+</Project>
