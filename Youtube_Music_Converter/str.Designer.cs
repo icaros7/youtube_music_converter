@@ -22,14 +22,14 @@ namespace Youtube_Music_Converter {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class str {
+    internal class Str {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal str() {
+        internal Str() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Youtube_Music_Converter {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Youtube_Music_Converter.str", typeof(str).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Youtube_Music_Converter.Str", typeof(Str).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,6 +57,51 @@ namespace Youtube_Music_Converter {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1. Make empty text file to use queue.
+        /// </summary>
+        internal static string str_help_1 {
+            get {
+                return ResourceManager.GetString("str_help_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2. In the file, write the address in the format supported by VideoLibraray (eg Youtube) separated by a newline..
+        /// </summary>
+        internal static string str_help_2 {
+            get {
+                return ResourceManager.GetString("str_help_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3. Drag and drop the txt file to the executable file or execute it through the command example below..
+        /// </summary>
+        internal static string str_help_3 {
+            get {
+                return ResourceManager.GetString("str_help_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to $ EXECUTABLE_FILE YOUR_OWN_FILE.txt.
+        /// </summary>
+        internal static string str_help_4 {
+            get {
+                return ResourceManager.GetString("str_help_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you want to read more information or help, please visit My Github..
+        /// </summary>
+        internal static string str_help_5 {
+            get {
+                return ResourceManager.GetString("str_help_5", resourceCulture);
             }
         }
         
