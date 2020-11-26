@@ -115,7 +115,7 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No parameter. Use --help for help.
+        ///   Looks up a localized string similar to No parameter or file doesn&apos;t exist. Use --help for help.
         /// </summary>
         internal static string str_no_args {
             get {

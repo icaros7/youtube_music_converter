@@ -19,7 +19,7 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="str_no_args" xml:space="preserve">
-        <value>No parameter. Use --help for help</value>
+        <value>No parameter or file doesn't exist. Use --help for help</value>
     </data>
     <data name="str_intro" xml:space="preserve">
         <value>Youtube Music Converter</value>
