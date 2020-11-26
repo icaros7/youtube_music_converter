@@ -22,14 +22,14 @@ namespace Youtube_Music_Converter {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Str_ko {
+    internal class Str {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Str_ko() {
+        internal Str() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Youtube_Music_Converter {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Youtube_Music_Converter.Str.ko", typeof(Str_ko).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Youtube_Music_Converter.Str", typeof(Str).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 작업 종료..
+        ///   Looks up a localized string similar to Task End..
         /// </summary>
         internal static string str_end {
             get {
@@ -70,7 +70,7 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1. 작업 큐로 사용할 빈 text 파일을 만듭니다..
+        ///   Looks up a localized string similar to 1. Make empty text file to use queue.
         /// </summary>
         internal static string str_help_1 {
             get {
@@ -79,7 +79,7 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2. 해당 파일 내에 VideoLibraray가 지원하는 형식의 주소 (예: Youtube)를 개행을 통해 구분하여 작성 합니다..
+        ///   Looks up a localized string similar to 2. In the file, write the address in the format supported by VideoLibraray (eg Youtube) separated by a newline..
         /// </summary>
         internal static string str_help_2 {
             get {
@@ -88,7 +88,7 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 3. 해당 txt 파일을 실행 파일에 드래그앤드롭 하거나 아래 명령어 예시를 통하여 실행합니다..
+        ///   Looks up a localized string similar to 3. Drag and drop the txt file to the executable file or execute it through the command example below..
         /// </summary>
         internal static string str_help_3 {
             get {
@@ -97,7 +97,7 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to $ 실행_파일 작업_큐.txt.
+        ///   Looks up a localized string similar to $ EXECUTABLE_FILE YOUR_OWN_FILE.txt.
         /// </summary>
         internal static string str_help_4 {
             get {
@@ -106,7 +106,7 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 만약 더 많은 정보나 도움말이 필요하다면, github 페이지를 방문해 주십시오..
+        ///   Looks up a localized string similar to If you want to read more information or help, please visit My Github..
         /// </summary>
         internal static string str_help_5 {
             get {
@@ -115,7 +115,7 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 아무 키를 눌러 종료 합니다..
+        ///   Looks up a localized string similar to Press any key to exit..
         /// </summary>
         internal static string str_help_6 {
             get {
@@ -124,7 +124,7 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Youtube 음악 변환기.
+        ///   Looks up a localized string similar to Youtube Music Converter.
         /// </summary>
         internal static string str_intro {
             get {
@@ -133,7 +133,7 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 매개변수가 없거나 파일이 존재하지 않습니다. 만약 도움이 필요하신 경우 아무키를 눌러주시고, 아니라면 Ctrl + C를 눌러주십시오..
+        ///   Looks up a localized string similar to No parameter or file doesn&apos;t exist. If you want to read help, press any key to continue or press Ctrl + C..
         /// </summary>
         internal static string str_no_args {
             get {
@@ -142,7 +142,7 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 큐의 URL 목록.
+        ///   Looks up a localized string similar to URL List in Queue.
         /// </summary>
         internal static string str_show_queue {
             get {
@@ -151,7 +151,7 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 작업 시작..
+        ///   Looks up a localized string similar to Task Start..
         /// </summary>
         internal static string str_start {
             get {
@@ -160,7 +160,7 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 타겟 파일 : .
+        ///   Looks up a localized string similar to Target File : .
         /// </summary>
         internal static string str_target {
             get {
@@ -169,7 +169,7 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 모든 작업의 수 : .
+        ///   Looks up a localized string similar to Number of Total Task : .
         /// </summary>
         internal static string str_total_task {
             get {
