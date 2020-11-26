@@ -7,48 +7,47 @@ namespace Youtube_Music_Converter
 {
     static class Program
     {
-        private class getHelp
+        private class GetHelp
         {
-            private int page;
-
-            public getHelp()
+            public GetHelp()
             {
-
+                this.Print();
             }
 
-            public getHelp(string page_number)
+            public void Print()
             {
-                this.page = int.Parse(page_number);
+                Console.WriteLine(Str.str_help_1);
+                Console.WriteLine(Str.str_help_2);
+                Console.WriteLine(Str.str_help_3);
+                Console.WriteLine();
+                Console.WriteLine(@"    " + Str.str_help_4 + "\n");
+                Console.WriteLine(Str.str_help_5);
+                Console.WriteLine(@"https://github.com/icaros7/youtube_music_converter");
             }
         }
 
-        static void Main(string[] args)
+        static void Main(String[] args)
         {
-            if (args.Length == 0 || args.Length > 3)
-            {
-                Console.WriteLine(str.str_no_args);
-                return;
-            }
-            else if (args[0] == "--help")
-            {
-                getHelp(args[1]);
-            }
-            else
-            {
-                string[] url = File.ReadAllLines(args[0], Encoding.UTF8);
-                if (url.Length == 0)
-                {
-                    Console.WriteLine(str.str_no_args);
-                    return;
-                }
-            }
-
-            string version = Assembly.GetExecutingAssembly().GetName().Version?.ToString();
-            Console.WriteLine(str.str_intro + @" - " + version);
+            String version = Assembly.GetExecutingAssembly().GetName().Version?.ToString();
+            Console.WriteLine(Str.str_intro + @" - " + version);
             Console.WriteLine(@"Powered by iCAROS7.");
             Console.WriteLine(@"-----------------------------");
             Console.WriteLine();
-            Console.WriteLine(str.str_target + args[0]);
+            
+            if (args.Length == 0 || args[0] == "--help")
+            {
+                GetHelp help = new GetHelp();
+                return;
+            }
+            
+            string[] url = File.Exists(args[0]) ? File.ReadAllLines(args[0], Encoding.UTF8) : null;
+            if (url == null || url.Length == 0)
+            {
+                Console.WriteLine(Str.str_no_args);
+                return;
+            }
+
+            Console.WriteLine(Str.str_target + args[0]);
             
         }
     }
