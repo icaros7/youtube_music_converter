@@ -3,8 +3,8 @@
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <TargetFramework>netcoreapp3.1</TargetFramework>
-        <AssemblyVersion>v1</AssemblyVersion>
-        <FileVersion>v1</FileVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <FileVersion>1.0.0.0</FileVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -14,7 +14,7 @@
       </EmbeddedResource>
       <EmbeddedResource Update="Str.ko.resx">
         <Generator>ResXFileCodeGenerator</Generator>
-        <LastGenOutput>str.Designer.cs</LastGenOutput>
+        <LastGenOutput>Str.ko.Designer.cs</LastGenOutput>
       </EmbeddedResource>
     </ItemGroup>
 
@@ -24,7 +24,7 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>str.resx</DependentUpon>
       </Compile>
-      <Compile Update="str.Designer.cs">
+      <Compile Update="Str.ko.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>Str.ko.resx</DependentUpon>
