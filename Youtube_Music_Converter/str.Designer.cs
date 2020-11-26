@@ -106,6 +106,15 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Press any key to exit..
+        /// </summary>
+        internal static string str_help_6 {
+            get {
+                return ResourceManager.GetString("str_help_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Youtube Music Converter.
         /// </summary>
         internal static string str_intro {
@@ -115,7 +124,7 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No parameter or file doesn&apos;t exist. Use --help for help.
+        ///   Looks up a localized string similar to No parameter or file doesn&apos;t exist. If you want to read help, press any key to continue or press Ctrl + C..
         /// </summary>
         internal static string str_no_args {
             get {

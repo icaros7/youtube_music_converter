@@ -19,7 +19,7 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="str_no_args" xml:space="preserve">
-        <value>No parameter or file doesn't exist. Use --help for help</value>
+        <value>No parameter or file doesn't exist. If you want to read help, press any key to continue or press Ctrl + C.</value>
     </data>
     <data name="str_intro" xml:space="preserve">
         <value>Youtube Music Converter</value>
@@ -41,5 +41,8 @@
     </data>
     <data name="str_help_5" xml:space="preserve">
         <value>If you want to read more information or help, please visit My Github.</value>
+    </data>
+    <data name="str_help_6" xml:space="preserve">
+        <value>Press any key to exit.</value>
     </data>
 </root>
