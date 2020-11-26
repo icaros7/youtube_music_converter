@@ -45,4 +45,16 @@
     <data name="str_help_6" xml:space="preserve">
         <value>Press any key to exit.</value>
     </data>
+    <data name="str_show_queue" xml:space="preserve">
+        <value>URL List in Queue</value>
+    </data>
+    <data name="str_start" xml:space="preserve">
+        <value>Task Start.</value>
+    </data>
+    <data name="str_end" xml:space="preserve">
+        <value>Task End.</value>
+    </data>
+    <data name="str_total_task" xml:space="preserve">
+        <value>Number of Total Task : </value>
+    </data>
 </root>

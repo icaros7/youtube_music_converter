@@ -61,6 +61,15 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Task End..
+        /// </summary>
+        internal static string str_end {
+            get {
+                return ResourceManager.GetString("str_end", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 1. Make empty text file to use queue.
         /// </summary>
         internal static string str_help_1 {
@@ -133,11 +142,38 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to URL List in Queue.
+        /// </summary>
+        internal static string str_show_queue {
+            get {
+                return ResourceManager.GetString("str_show_queue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Task Start..
+        /// </summary>
+        internal static string str_start {
+            get {
+                return ResourceManager.GetString("str_start", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Target File : .
         /// </summary>
         internal static string str_target {
             get {
                 return ResourceManager.GetString("str_target", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number of Total Task : .
+        /// </summary>
+        internal static string str_total_task {
+            get {
+                return ResourceManager.GetString("str_total_task", resourceCulture);
             }
         }
     }
