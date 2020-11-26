@@ -70,7 +70,7 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1. 빈 텍스트 파일을 큐로 사용하기 위해 만드세요..
+        ///   Looks up a localized string similar to 1. 큐를 위한 빈 텍스트 파일을 만드세요..
         /// </summary>
         internal static string str_help_1 {
             get {
@@ -106,7 +106,7 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 만약 더 많은 정보나 도움이 필요하다면, 제작자의 Github를 방문 해 주세요..
+        ///   Looks up a localized string similar to 만약 더 많은 정보나 도움이 필요하시다면, 아래 Github를 방문 해주십시오..
         /// </summary>
         internal static string str_help_5 {
             get {
@@ -115,7 +115,7 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  아무 키를 눌러 종료.
+        ///   Looks up a localized string similar to 아무 키를 눌러 종료합니다..
         /// </summary>
         internal static string str_help_6 {
             get {
@@ -133,7 +133,7 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 매개변수 혹은 파일이 존재 하지 않습니다. 만약 도움말이 필요하다면 아무키를 눌러주세요. 그렇지 않다면 Ctrl + C를 눌러 종료..
+        ///   Looks up a localized string similar to 매개변수 혹은 파일이 없습니다. 만약 도움말을 읽으시려면 아무키를 눌러주세요. 원치 않는 다면 Ctrl + C를 눌러 종료합니다..
         /// </summary>
         internal static string str_no_args {
             get {
