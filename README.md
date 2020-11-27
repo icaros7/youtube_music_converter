@@ -53,7 +53,7 @@ Youtube_Music_Converter.exe YOUR_QUEUE.txt
 4. The download starts within a directory with the same name as the your queue text file.
 
 #### ~GUI~
-~추가 예정~
+~Coming soon~
 
 
 ---
