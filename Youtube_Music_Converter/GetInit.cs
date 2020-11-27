@@ -22,6 +22,7 @@ namespace Youtube_Music_Converter
         {
             this.args = args;
             
+            log.Info(@"");
             log.Info(@"==== App Start ====");
         }
 

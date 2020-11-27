@@ -109,24 +109,25 @@ namespace Youtube_Music_Converter
                 var yt = YouTube.Default;
                 for (int i = 0; i < _url.Length; i++)
                 {
-                    log.Info(@">>>> " + i + " task start");
+                    log.Info(@">>>> Task " + (i + 1) + " start");
+                    log.Info(@">>>> Task " + (i + 1) + " start");
                     var vid = yt.GetVideo(_url[i]);
 
                     try
                     {
-                        log.Info(@">>>>> " + i + @" WriteAllBytes");
+                        log.Info(@">>>>> Task " + (i + 1) + @" WriteAllBytes");
                         Console.WriteLine(@"Downloading " + vid.FullName);
                         File.WriteAllBytes(path + @"\" + vid.FullName, vid.GetBytes());
                     }
                     catch (Exception e)
                     {
                         log.Error(e);
-                        log.Error(@">>>>> " + i + @" WriteAllBytes Fail");
+                        log.Error(@">>>>> Task " + (i + 1) + @" WriteAllBytes Fail");
                         Console.WriteLine(@"Fail : " + _url[i]);
                     }
                     finally
                     {
-                        log.Info(@">>>> " + i + @"task end");
+                        log.Info(@">>>> Task " + (i + 1) + @" end");
                     }
                 }
             }
