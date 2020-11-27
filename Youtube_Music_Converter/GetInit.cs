@@ -14,9 +14,7 @@ namespace Youtube_Music_Converter
         {
             log.Info(@"");
             log.Info(@"==== App Start ====");
-            Console.WriteLine(Str.str_no_args);
             this.args = null;
-            Console.WriteLine();
         }
         public GetInit(string args)
         {
@@ -33,9 +31,16 @@ namespace Youtube_Music_Converter
             log.Info(@">> argument : " + args);
             log.Info(@">> Version : " + version);
 
+            Console.WriteLine(Str.str_intro + @" - " + version);
+            Console.WriteLine(@"Powered by iCAROS7.");
+            Console.WriteLine(@"-----------------------------");
+            Console.WriteLine();
+            
             if (args == null)
             {
                 log.Info(@">> Detected no argument");
+                Console.WriteLine(Str.str_no_args);
+                Console.WriteLine();
                 return "GetHelp";
             }
             else if (args == "--help")
@@ -45,11 +50,6 @@ namespace Youtube_Music_Converter
             }
             else
             {
-                Console.WriteLine(Str.str_intro + @" - " + version);
-                Console.WriteLine(@"Powered by iCAROS7.");
-                Console.WriteLine(@"-----------------------------");
-                Console.WriteLine();
-
                 log.Info(@"> App Initialized");
                 log.Info(@"");
                 return "Normal";
