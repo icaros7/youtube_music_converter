@@ -6,7 +6,16 @@ namespace Youtube_Music_Converter
     {
         static void Main(String[] args)
         {
-            GetInit init = new GetInit(args[0]);
+            GetInit init;
+            if (args.Length == 0)
+            {
+                init = new GetInit();
+            }
+            else
+            {
+                init = new GetInit(args[0]);
+            }
+
             string status = init.Init();
 
             if (status == "GetHelp")
