@@ -1,5 +1,9 @@
-# youtube_music_converter
-[VideoLibrary](https://github.com/omansak/libvideo)를 활용한 Youtube 음원 변환기 입니다.
+# Youtube Music Converter
+[VideoLibrary](https://github.com/omansak/libvideo)를 활용한 Youtube 음원 변환기 입니다.  
+???를 통하여 최종적으로 Youtube 영상을 [MP3](https://ko.wikipedia.org/wiki/MP3) 확장자로 저장 합니다.
+
+It's a Youtube music converter that using [VideoLibrary](https://github.com/omansak/libvideo).  
+Finaly, You can save Youtube video to [MP3](https://en.wikipedia.org/wiki/MP3) extension via ???
 
 ---
 
