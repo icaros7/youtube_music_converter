@@ -97,11 +97,20 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to $ 실행_파일 사용자_큐_파일.txt.
+        ///   Looks up a localized string similar to $ dotnet Youtube_Music_Converter.dll 사용자_큐.txt.
         /// </summary>
-        internal static string str_help_4 {
+        internal static string str_help_4_linux {
             get {
-                return ResourceManager.GetString("str_help_4", resourceCulture);
+                return ResourceManager.GetString("str_help_4_linux", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Youtube_Music_Converter.exe 사용자_큐.txt.
+        /// </summary>
+        internal static string str_help_4_windows {
+            get {
+                return ResourceManager.GetString("str_help_4_windows", resourceCulture);
             }
         }
         
@@ -124,11 +133,20 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 매개변수 혹은 파일이 없거나 잘못 되었습니다. 만약 도움이 필요하시다면 --help 옵션을 사용 해 주십시오..
+        ///   Looks up a localized string similar to 매개변수 혹은 파일이 없거나 잘못 되었습니다..
         /// </summary>
         internal static string str_no_args {
             get {
                 return ResourceManager.GetString("str_no_args", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  만약 도움이 필요하시다면 --help 옵션을 사용 해 주십시오..
+        /// </summary>
+        internal static string str_no_args_with {
+            get {
+                return ResourceManager.GetString("str_no_args_with", resourceCulture);
             }
         }
         
@@ -142,7 +160,7 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 아무 키를 눌러 종료합니다..
+        ///   Looks up a localized string similar to 엔터 키를 눌러 종료합니다..
         /// </summary>
         internal static string str_press_key_exit {
             get {

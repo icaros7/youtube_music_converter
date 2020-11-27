@@ -18,7 +18,10 @@ namespace Youtube_Music_Converter
             Console.WriteLine(Str.str_help_2);
             Console.WriteLine(Str.str_help_3);
             Console.WriteLine();
-            Console.WriteLine(@"    " + Str.str_help_4);
+            Console.WriteLine(@"Linux :");
+            Console.WriteLine(@"    " + Str.str_help_4_linux);
+            Console.WriteLine(@"Windows :");
+            Console.WriteLine(@"    " + Str.str_help_4_windows);
             Console.WriteLine();
             Console.WriteLine(Str.str_help_5);
             Console.WriteLine(@"https://github.com/icaros7/youtube_music_converter");

@@ -97,11 +97,20 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to $ EXECUTABLE_FILE YOUR_OWN_FILE.txt.
+        ///   Looks up a localized string similar to $ dotnet Youtube_Music_Converter.dll YOUR_QUEUE.txt.
         /// </summary>
-        internal static string str_help_4 {
+        internal static string str_help_4_linux {
             get {
-                return ResourceManager.GetString("str_help_4", resourceCulture);
+                return ResourceManager.GetString("str_help_4_linux", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Youtube_Music_Converter.exe YOUR_QUEUE.txt.
+        /// </summary>
+        internal static string str_help_4_windows {
+            get {
+                return ResourceManager.GetString("str_help_4_windows", resourceCulture);
             }
         }
         
@@ -124,11 +133,20 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Parameter or file doesn&apos;t exist or wrong. If you want to get help, use --help option..
+        ///   Looks up a localized string similar to Parameter or file doesn&apos;t exist or wrong..
         /// </summary>
         internal static string str_no_args {
             get {
                 return ResourceManager.GetString("str_no_args", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  If you want to get help, use --help option..
+        /// </summary>
+        internal static string str_no_args_with {
+            get {
+                return ResourceManager.GetString("str_no_args_with", resourceCulture);
             }
         }
         
@@ -142,7 +160,7 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Press any key to exit..
+        ///   Looks up a localized string similar to Press enter key to exit..
         /// </summary>
         internal static string str_press_key_exit {
             get {

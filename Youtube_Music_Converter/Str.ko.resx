@@ -30,20 +30,20 @@
     <data name="str_help_1" xml:space="preserve">
         <value>1. 큐를 위한 빈 텍스트 파일을 만드세요.</value>
     </data>
-    <data name="str_help_4" xml:space="preserve">
-        <value>$ 실행_파일 사용자_큐_파일.txt</value>
+    <data name="str_help_4_linux" xml:space="preserve">
+        <value>$ dotnet Youtube_Music_Converter.dll 사용자_큐.txt</value>
     </data>
     <data name="str_help_5" xml:space="preserve">
         <value>만약 더 많은 정보나 도움이 필요하시다면, 아래 Github를 방문 해주십시오.</value>
     </data>
     <data name="str_press_key_exit" xml:space="preserve">
-        <value>아무 키를 눌러 종료합니다.</value>
+        <value>엔터 키를 눌러 종료합니다.</value>
     </data>
     <data name="str_intro" xml:space="preserve">
         <value>Youtube 음악 변환기</value>
     </data>
     <data name="str_no_args" xml:space="preserve">
-        <value>매개변수 혹은 파일이 없거나 잘못 되었습니다. 만약 도움이 필요하시다면 --help 옵션을 사용 해 주십시오.</value>
+        <value>매개변수 혹은 파일이 없거나 잘못 되었습니다.</value>
     </data>
     <data name="str_show_queue" xml:space="preserve">
         <value>큐의 URL 목록</value>
@@ -62,5 +62,11 @@
     </data>
     <data name="str_press_key_continue" xml:space="preserve">
         <value>아무 키를 눌러 계속합니다.</value>
+    </data>
+    <data name="str_no_args_with" xml:space="preserve">
+        <value> 만약 도움이 필요하시다면 --help 옵션을 사용 해 주십시오.</value>
+    </data>
+    <data name="str_help_4_windows" xml:space="preserve">
+        <value>Youtube_Music_Converter.exe 사용자_큐.txt</value>
     </data>
 </root>

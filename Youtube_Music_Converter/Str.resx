@@ -19,7 +19,7 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="str_no_args" xml:space="preserve">
-        <value>Parameter or file doesn't exist or wrong. If you want to get help, use --help option.</value>
+        <value>Parameter or file doesn't exist or wrong.</value>
     </data>
     <data name="str_intro" xml:space="preserve">
         <value>Youtube Music Converter</value>
@@ -36,14 +36,14 @@
     <data name="str_help_3" xml:space="preserve">
         <value>3. Drag and drop the txt file to the executable file or execute it through the command example below.</value>
     </data>
-    <data name="str_help_4" xml:space="preserve">
-        <value>$ EXECUTABLE_FILE YOUR_OWN_FILE.txt</value>
+    <data name="str_help_4_linux" xml:space="preserve">
+        <value>$ dotnet Youtube_Music_Converter.dll YOUR_QUEUE.txt</value>
     </data>
     <data name="str_help_5" xml:space="preserve">
         <value>If you want to read more information or help, please visit My Github.</value>
     </data>
     <data name="str_press_key_exit" xml:space="preserve">
-        <value>Press any key to exit.</value>
+        <value>Press enter key to exit.</value>
     </data>
     <data name="str_show_queue" xml:space="preserve">
         <value>URL List in Queue</value>
@@ -62,5 +62,11 @@
     </data>
     <data name="str_press_key_continue" xml:space="preserve">
         <value>Press any key to continue.</value>
+    </data>
+    <data name="str_no_args_with" xml:space="preserve">
+        <value> If you want to get help, use --help option.</value>
+    </data>
+    <data name="str_help_4_windows" xml:space="preserve">
+        <value>Youtube_Music_Converter.exe YOUR_QUEUE.txt</value>
     </data>
 </root>
