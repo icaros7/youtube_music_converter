@@ -19,7 +19,7 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="str_no_args" xml:space="preserve">
-        <value>No parameter or file doesn't exist. If you want to read help, press any key to continue or press Ctrl + C.</value>
+        <value>Parameter or file doesn't exist or wrong. If you want to get help, use --help option.</value>
     </data>
     <data name="str_intro" xml:space="preserve">
         <value>Youtube Music Converter</value>
@@ -42,7 +42,7 @@
     <data name="str_help_5" xml:space="preserve">
         <value>If you want to read more information or help, please visit My Github.</value>
     </data>
-    <data name="str_help_6" xml:space="preserve">
+    <data name="str_press_key_exit" xml:space="preserve">
         <value>Press any key to exit.</value>
     </data>
     <data name="str_show_queue" xml:space="preserve">
@@ -56,5 +56,11 @@
     </data>
     <data name="str_total_task" xml:space="preserve">
         <value>Number of Total Task : </value>
+    </data>
+    <data name="str_unknown" xml:space="preserve">
+        <value>Unknows Error. Please report this issue with log file (in same directory).</value>
+    </data>
+    <data name="str_press_key_continue" xml:space="preserve">
+        <value>Press any key to continue.</value>
     </data>
 </root>

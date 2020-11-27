@@ -115,15 +115,6 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 아무 키를 눌러 종료합니다..
-        /// </summary>
-        internal static string str_help_6 {
-            get {
-                return ResourceManager.GetString("str_help_6", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Youtube 음악 변환기.
         /// </summary>
         internal static string str_intro {
@@ -133,11 +124,29 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 매개변수 혹은 파일이 없습니다. 만약 도움말을 읽으시려면 아무키를 눌러주세요. 원치 않는 다면 Ctrl + C를 눌러 종료합니다..
+        ///   Looks up a localized string similar to 매개변수 혹은 파일이 없거나 잘못 되었습니다. 만약 도움이 필요하시다면 --help 옵션을 사용 해 주십시오..
         /// </summary>
         internal static string str_no_args {
             get {
                 return ResourceManager.GetString("str_no_args", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 아무 키를 눌러 계속합니다..
+        /// </summary>
+        internal static string str_press_key_continue {
+            get {
+                return ResourceManager.GetString("str_press_key_continue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 아무 키를 눌러 종료합니다..
+        /// </summary>
+        internal static string str_press_key_exit {
+            get {
+                return ResourceManager.GetString("str_press_key_exit", resourceCulture);
             }
         }
         
@@ -174,6 +183,15 @@ namespace Youtube_Music_Converter {
         internal static string str_total_task {
             get {
                 return ResourceManager.GetString("str_total_task", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 알 수 없는 오류입니다. 같은 디렉토리 내에 있는 로그파일과 함께 이 문제를 제보 해 주십시오..
+        /// </summary>
+        internal static string str_unknown {
+            get {
+                return ResourceManager.GetString("str_unknown", resourceCulture);
             }
         }
     }

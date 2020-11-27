@@ -36,14 +36,14 @@
     <data name="str_help_5" xml:space="preserve">
         <value>만약 더 많은 정보나 도움이 필요하시다면, 아래 Github를 방문 해주십시오.</value>
     </data>
-    <data name="str_help_6" xml:space="preserve">
+    <data name="str_press_key_exit" xml:space="preserve">
         <value>아무 키를 눌러 종료합니다.</value>
     </data>
     <data name="str_intro" xml:space="preserve">
         <value>Youtube 음악 변환기</value>
     </data>
     <data name="str_no_args" xml:space="preserve">
-        <value>매개변수 혹은 파일이 없습니다. 만약 도움말을 읽으시려면 아무키를 눌러주세요. 원치 않는 다면 Ctrl + C를 눌러 종료합니다.</value>
+        <value>매개변수 혹은 파일이 없거나 잘못 되었습니다. 만약 도움이 필요하시다면 --help 옵션을 사용 해 주십시오.</value>
     </data>
     <data name="str_show_queue" xml:space="preserve">
         <value>큐의 URL 목록</value>
@@ -56,5 +56,11 @@
     </data>
     <data name="str_total_task" xml:space="preserve">
         <value>전체 작업 수 : </value>
+    </data>
+    <data name="str_unknown" xml:space="preserve">
+        <value>알 수 없는 오류입니다. 같은 디렉토리 내에 있는 로그파일과 함께 이 문제를 제보 해 주십시오.</value>
+    </data>
+    <data name="str_press_key_continue" xml:space="preserve">
+        <value>아무 키를 눌러 계속합니다.</value>
     </data>
 </root>

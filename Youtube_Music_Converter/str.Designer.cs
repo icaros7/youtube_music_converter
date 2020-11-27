@@ -115,15 +115,6 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Press any key to exit..
-        /// </summary>
-        internal static string str_help_6 {
-            get {
-                return ResourceManager.GetString("str_help_6", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Youtube Music Converter.
         /// </summary>
         internal static string str_intro {
@@ -133,11 +124,29 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No parameter or file doesn&apos;t exist. If you want to read help, press any key to continue or press Ctrl + C..
+        ///   Looks up a localized string similar to Parameter or file doesn&apos;t exist or wrong. If you want to get help, use --help option..
         /// </summary>
         internal static string str_no_args {
             get {
                 return ResourceManager.GetString("str_no_args", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Press any key to continue..
+        /// </summary>
+        internal static string str_press_key_continue {
+            get {
+                return ResourceManager.GetString("str_press_key_continue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Press any key to exit..
+        /// </summary>
+        internal static string str_press_key_exit {
+            get {
+                return ResourceManager.GetString("str_press_key_exit", resourceCulture);
             }
         }
         
@@ -174,6 +183,15 @@ namespace Youtube_Music_Converter {
         internal static string str_total_task {
             get {
                 return ResourceManager.GetString("str_total_task", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unknows Error. Please report this issue with log file (in same directory)..
+        /// </summary>
+        internal static string str_unknown {
+            get {
+                return ResourceManager.GetString("str_unknown", resourceCulture);
             }
         }
     }
