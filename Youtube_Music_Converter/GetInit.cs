@@ -14,7 +14,6 @@ namespace Youtube_Music_Converter
         {
             this.args = args;
             
-            log.Info(@"");
             log.Info(@"==== App Start ====");
         }
 
@@ -46,6 +45,7 @@ namespace Youtube_Music_Converter
         {
             log.Info(@"> Call App Exit (Status : " + status + @")");
             log.Info(@"==== App Exit ====");
+            log.Info(@"");
             System.Environment.Exit(0);
         }
     }
