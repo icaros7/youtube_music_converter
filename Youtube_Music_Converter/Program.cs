@@ -24,6 +24,12 @@ namespace Youtube_Music_Converter
                 status = help.Print();
                 init.Exit(status);
             }
+            else if (status == "No Args")
+            {
+                GetHelp help = new GetHelp();
+                help.Print();
+                init.Exit(status);
+            }
             else if (status == "Normal")
             {
                 GetVideo video = new GetVideo();
