@@ -232,11 +232,29 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unavailable Stream : .
+        /// </summary>
+        internal static string str_unavailable_stream {
+            get {
+                return ResourceManager.GetString("str_unavailable_stream", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unknows Error. Please report this issue with log file (in same directory)..
         /// </summary>
         internal static string str_unknown {
             get {
                 return ResourceManager.GetString("str_unknown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown type file. This Application support only text file (.txt)..
+        /// </summary>
+        internal static string str_unknown_type {
+            get {
+                return ResourceManager.GetString("str_unknown_type", resourceCulture);
             }
         }
     }

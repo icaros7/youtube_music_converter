@@ -78,4 +78,10 @@
     <data name="str_not_support_type" xml:space="preserve">
         <value>Not valid Youtube URL : </value>
     </data>
+    <data name="str_unknown_type" xml:space="preserve">
+        <value>Unknown type file. This Application support only text file (.txt).</value>
+    </data>
+    <data name="str_unavailable_stream" xml:space="preserve">
+        <value>Unavailable Stream : </value>
+    </data>
 </root>

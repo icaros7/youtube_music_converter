@@ -232,11 +232,29 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 존재하지 않는 영상 : .
+        /// </summary>
+        internal static string str_unavailable_stream {
+            get {
+                return ResourceManager.GetString("str_unavailable_stream", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 알 수 없는 오류입니다. 같은 디렉토리 내에 있는 로그파일과 함께 이 문제를 제보 해 주십시오..
         /// </summary>
         internal static string str_unknown {
             get {
                 return ResourceManager.GetString("str_unknown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 알 수 없는 타입의 파일 입니다. 본 앱은 텍스트 파일 형식 (.txt)만 지원 합니다..
+        /// </summary>
+        internal static string str_unknown_type {
+            get {
+                return ResourceManager.GetString("str_unknown_type", resourceCulture);
             }
         }
     }

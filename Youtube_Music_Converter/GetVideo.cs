@@ -59,19 +59,37 @@ namespace Youtube_Music_Converter
             
             // Check Dir exist
             log.Info(@">>> Check output dir exist");
-            DirectoryInfo dir = new DirectoryInfo(path);
-            if (dir.Exists == false)
+            try
             {
-                dir.Create();
-                log.Info(@">>>> Create directory");
+                DirectoryInfo dir = new DirectoryInfo(path);
+                if (dir.Exists == false)
+                {
+                    dir.Create();
+                    log.Info(@">>>> Create directory");
+                }
+                else
+                {
+                    log.Info(@">>>> Skip create directory");
+                }
             }
-            else
+            catch (IOException e)
             {
-                log.Info(@">>>> Skip create directory");
+                log.Error(e);
+                log.Error(@">>>> Not supported type : " + path);
+                Console.WriteLine(Str.str_unknown_type);
+                return "Unknown Type";
             }
-
-            log.Info(@">> GetVideo Initialized");
-            log.Info(@"");
+            catch (Exception e)
+            {
+                log.Error(e);
+                return "Exception";
+            }
+            finally
+            {
+                log.Info(@">> GetVideo Initialized");
+                log.Info(@"");
+            }
+            
             return "Normal";
         }
 
@@ -103,8 +121,6 @@ namespace Youtube_Music_Converter
                 Console.WriteLine(Str.str_total_task + _url.Length);
                 Console.WriteLine();
                 Console.WriteLine(@"-----------------------------");
-                
-
 
                 var yt = YouTube.Default;
                 for (int i = 0; i < _url.Length; i++)
@@ -123,6 +139,12 @@ namespace Youtube_Music_Converter
                         log.Error(e);
                         log.Error(@">>>>> Task " + (i + 1) + @" WriteAllBytes Fail. Not valid Youtube URL.");
                         Console.WriteLine(@"> " + Str.str_not_support_type + _url[i]);
+                    }
+                    catch (VideoLibrary.Exceptions.UnavailableStreamException e)
+                    {
+                        log.Error(e);
+                        log.Error(@">>>>> Task" + (i + 1) + @" WriteAllBytes Fail. Video has unavailable stream");
+                        Console.WriteLine(@"> " + Str.str_unavailable_stream + _url[i]);
                     }
                     catch (Exception e)
                     {

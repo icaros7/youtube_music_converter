@@ -28,7 +28,7 @@ namespace Youtube_Music_Converter
             {
                 GetVideo video = new GetVideo();
                 status = video.Init(args[0]);
-                if (status == "Wrong Args")
+                if (status == "Wrong Args" || status == "Unknown Type")
                 {
                     init.Exit(status);
                 }
