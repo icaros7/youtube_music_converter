@@ -39,12 +39,12 @@ namespace Youtube_Music_Converter
             int isFull = args.IndexOf(":", StringComparison.Ordinal);
             if (isFull == -1)
             {
-                log.Info(@">>> Detected only file name");
+                log.Info(@">>>> Detected only file name");
                 path = System.Environment.CurrentDirectory + @"\" + args.Replace(@".txt", @"");
             }
             else if (isFull == 1)
             {
-                log.Info(@">>> Detected full directory url");
+                log.Info(@">>>> Detected full directory url");
                 path = args.Replace(@".txt", @"");
             }
             else
