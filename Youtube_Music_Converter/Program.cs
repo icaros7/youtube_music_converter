@@ -79,7 +79,15 @@ namespace Youtube_Music_Converter
     
                 Console.WriteLine(Str.str_target + args);
                 Console.WriteLine();
-                this.path = System.Environment.CurrentDirectory + @"\" + args.Replace(@".txt", @"");
+
+                if (args.IndexOf(":", StringComparison.Ordinal) == -1)
+                {
+                    path = System.Environment.CurrentDirectory + @"\" + args.Replace(@".txt", @"");
+                }
+                else
+                {
+                    path = args.Replace(@".txt", @"");
+                }
             }
 
             public void ShowQueue()
