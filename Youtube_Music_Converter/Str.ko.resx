@@ -69,4 +69,13 @@
     <data name="str_help_4_windows" xml:space="preserve">
         <value>Youtube_Music_Converter.exe 사용자_큐.txt</value>
     </data>
+    <data name="str_downloading" xml:space="preserve">
+        <value>다운로드중 : </value>
+    </data>
+    <data name="str_download_fail" xml:space="preserve">
+        <value>다운로드 실패 : </value>
+    </data>
+    <data name="str_not_support_type" xml:space="preserve">
+        <value>올바른 Youtube URL이 아님 : </value>
+    </data>
 </root>

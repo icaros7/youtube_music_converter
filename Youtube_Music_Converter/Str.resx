@@ -69,4 +69,13 @@
     <data name="str_help_4_windows" xml:space="preserve">
         <value>Youtube_Music_Converter.exe YOUR_QUEUE.txt</value>
     </data>
+    <data name="str_downloading" xml:space="preserve">
+        <value>Downloading : </value>
+    </data>
+    <data name="str_download_fail" xml:space="preserve">
+        <value>Download Fail : </value>
+    </data>
+    <data name="str_not_support_type" xml:space="preserve">
+        <value>Not valid Youtube URL : </value>
+    </data>
 </root>

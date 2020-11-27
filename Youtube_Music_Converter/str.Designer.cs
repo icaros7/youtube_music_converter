@@ -61,6 +61,24 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Download Fail : .
+        /// </summary>
+        internal static string str_download_fail {
+            get {
+                return ResourceManager.GetString("str_download_fail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Downloading : .
+        /// </summary>
+        internal static string str_downloading {
+            get {
+                return ResourceManager.GetString("str_downloading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Task End..
         /// </summary>
         internal static string str_end {
@@ -147,6 +165,15 @@ namespace Youtube_Music_Converter {
         internal static string str_no_args_with {
             get {
                 return ResourceManager.GetString("str_no_args_with", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not valid Youtube URL : .
+        /// </summary>
+        internal static string str_not_support_type {
+            get {
+                return ResourceManager.GetString("str_not_support_type", resourceCulture);
             }
         }
         
