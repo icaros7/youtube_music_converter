@@ -26,9 +26,9 @@ namespace Youtube_Music_Converter
             _url = File.Exists(args) ? File.ReadAllLines(args, Encoding.UTF8) : null;
             if (_url == null || _url.Length == 0)
             {
-                log.Error(@">>> Fail read" + args);
-                Console.WriteLine(Str.str_no_args);
-                Console.ReadKey();
+                log.Error(@">>> Fail read " + args);
+                Console.Write(Str.str_no_args);
+                Console.WriteLine(Str.str_no_args_with);
                 return "Wrong Args";
             }
 
@@ -51,8 +51,7 @@ namespace Youtube_Music_Converter
             {
                 log.Info(@">>> Detected unknown format");
                 Console.WriteLine(Str.str_no_args);
-                Console.WriteLine(Str.str_press_key_exit);
-                Console.ReadKey();
+                Console.WriteLine(Str.str_no_args_with);
                 log.Info(@">> GetVideo Initialized");
                 return "Wrong Args";
             }

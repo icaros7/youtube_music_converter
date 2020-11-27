@@ -23,9 +23,7 @@ namespace Youtube_Music_Converter
             Console.WriteLine(Str.str_help_5);
             Console.WriteLine(@"https://github.com/icaros7/youtube_music_converter");
             Console.WriteLine();
-            Console.WriteLine(Str.str_press_key_exit);
             
-            Console.ReadKey();  // Pause to exit
             log.Info(@">> Called GetHelp");
             log.Info(@"");
 
