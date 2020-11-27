@@ -30,7 +30,7 @@ namespace Youtube_Music_Converter
                 Console.WriteLine(@"https://github.com/icaros7/youtube_music_converter");
                 Console.WriteLine("\n{0}", Str.str_help_6);
                 Console.ReadKey();  // Pause to exit
-                log.Info(@"====== App Exit Normally ======");
+                log.Info(@"====== App Exit");
                 System.Environment.Exit(0);
             }
         }
@@ -38,8 +38,9 @@ namespace Youtube_Music_Converter
         static void Main(String[] args)
         {
             String version = Assembly.GetExecutingAssembly().GetName().Version?.ToString();
-            log.Info(@"====== App Start ======");
-            log.Info(@"args : " + args.ToString());
+            log.Info(@"");
+            log.Info(@"====== App Start");
+            log.Info(@"args : " + args[0]);
             log.Info(@"Version : " + version);
             Console.WriteLine(Str.str_intro + @" - " + version);
             Console.WriteLine(@"Powered by iCAROS7.");
@@ -72,7 +73,7 @@ namespace Youtube_Music_Converter
                     log.Error(@"No Queue or file.");
                     Console.WriteLine(Str.str_no_args);
                     Console.ReadKey();
-                    log.Info(@"====== App Exit Normally ======");
+                    log.Info(@"====== App Exit");
                     System.Environment.Exit(0);
                 }
     
@@ -95,7 +96,7 @@ namespace Youtube_Music_Converter
 
             public void Start()
             {
-                log.Info(@"== Task Start ==");
+                log.Info(@"=Task Start");
                 try
                 {
                     Console.WriteLine(@"-----------------------------" + "\n");
@@ -156,15 +157,15 @@ namespace Youtube_Music_Converter
                 catch(Exception e)
                 {
                     log.Error(e);
-                    log.Error(@"== Task Interrupt ==");
+                    log.Error(@"=Task Interrupt");
                     Console.WriteLine(e + "\nPress any key to continue...");
                     Console.ReadKey();
                 }
 
-                log.Info(@"== Task End Normally ==");
+                log.Info(@"=Task End");
                 Console.WriteLine(@"-----------------------------" + "\n");
                 Console.WriteLine(Str.str_end);
-                log.Info(@"====== App Exit Normally ======");
+                log.Info(@"====== App Exit");
                 System.Environment.Exit(0);
             }
         }
