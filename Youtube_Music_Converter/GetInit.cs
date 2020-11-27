@@ -37,6 +37,7 @@ namespace Youtube_Music_Converter
                 Console.WriteLine();
 
                 log.Info(@"> App Initialized");
+                log.Info(@"");
                 return "Normal";
             }
         }

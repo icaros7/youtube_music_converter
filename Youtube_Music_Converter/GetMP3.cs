@@ -16,6 +16,7 @@ namespace Youtube_Music_Converter
             log.Info(@">> GetMP3 initializing");
 
             log.Info(@">> GetMP3 initialized");
+            log.Info(@"");
         }
 
         public void Convert()
@@ -23,6 +24,7 @@ namespace Youtube_Music_Converter
             log.Info(@">> GetMP3 Convert");
 
             log.Info(@">> GetMP3 Convert Success");
+            log.Info(@"");
         }
     }
 }

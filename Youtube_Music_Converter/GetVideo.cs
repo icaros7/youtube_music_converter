@@ -72,6 +72,7 @@ namespace Youtube_Music_Converter
             }
 
             log.Info(@">> GetVideo Initialized");
+            log.Info(@"");
             return "Normal";
         }
 
@@ -88,6 +89,7 @@ namespace Youtube_Music_Converter
             }
 
             log.Info(@">> GetVideo ShowQueue Success");
+            log.Info(@"");
         }
 
         public string Start()
@@ -144,6 +146,7 @@ namespace Youtube_Music_Converter
             log.Info(@">>> Total Task End");
 
             log.Info(@">> GetVideo Start Success");
+            log.Info(@"");
             Console.WriteLine(@"-----------------------------" + "\n");
             Console.WriteLine(Str.str_end);
 

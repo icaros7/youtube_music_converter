@@ -27,7 +27,7 @@ namespace Youtube_Music_Converter
             
             Console.ReadKey();  // Pause to exit
             log.Info(@">> Called GetHelp");
-            log.Info(@"> App Initialized");
+            log.Info(@"");
 
             return "Normal";
         }
