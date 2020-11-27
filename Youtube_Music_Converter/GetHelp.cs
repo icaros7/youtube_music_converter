@@ -9,11 +9,12 @@ namespace Youtube_Music_Converter
         
         public GetHelp()
         {
-            log.Info(">> Call GetHelp");
+            log.Info("> Call GetHelp");
         }
 
         public string Print()
         {
+            log.Info(@">> GetHelp Print");
             Console.WriteLine(Str.str_help_1);
             Console.WriteLine(Str.str_help_2);
             Console.WriteLine(Str.str_help_3);
@@ -27,7 +28,7 @@ namespace Youtube_Music_Converter
             Console.WriteLine(@"https://github.com/icaros7/youtube_music_converter");
             Console.WriteLine();
             
-            log.Info(@">> Called GetHelp");
+            log.Info(@">> GetHelp Print Success");
             log.Info(@"");
 
             return "Normal";
