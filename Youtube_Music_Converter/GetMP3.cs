@@ -40,7 +40,9 @@ namespace Youtube_Music_Converter
 
                     string output = Path.ChangeExtension(Path.GetTempFileName(), "mp3");
                     var conversion = FFmpeg.Conversions.FromSnippet.ExtractAudio(_url[_successPath[i]], output);
-                    await conversion.Start();
+                    
+                    // TODO: Check out Xabe.FFmpeg document.
+                    // await conversion.Start();
                 }
                 catch (Exception e)
                 {
