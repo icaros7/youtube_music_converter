@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using log4net;
@@ -10,7 +11,7 @@ namespace Youtube_Music_Converter
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(Program));
         
-        private string[] _url;
+        public string[] _url;
         private string path;
         
         public GetVideo()
@@ -93,6 +94,8 @@ namespace Youtube_Music_Converter
             return "Normal";
         }
 
+        public List<int> mp3path = new List<int>();
+
         public void ShowQueue()
         {
             log.Info(@">> GetVideo ShowQueue");
@@ -133,23 +136,27 @@ namespace Youtube_Music_Converter
                         var vid = yt.GetVideo(_url[i]);
                         Console.WriteLine(Str.str_downloading + vid.FullName);
                         File.WriteAllBytes(path + @"\" + vid.FullName, vid.GetBytes());
+                        mp3path.Add(i);
                     }
                     catch (ArgumentException e)
                     {
                         log.Error(e);
                         log.Error(@">>>>> Task " + (i + 1) + @" WriteAllBytes Fail. Not valid Youtube URL.");
+                        mp3path.Remove(i);
                         Console.WriteLine(@"> " + Str.str_not_support_type + _url[i]);
                     }
                     catch (VideoLibrary.Exceptions.UnavailableStreamException e)
                     {
                         log.Error(e);
                         log.Error(@">>>>> Task" + (i + 1) + @" WriteAllBytes Fail. Video has unavailable stream");
+                        mp3path.Remove(i);
                         Console.WriteLine(@"> " + Str.str_unavailable_stream + _url[i]);
                     }
                     catch (Exception e)
                     {
                         log.Error(e);
                         log.Error(@">>>>> Task " + (i + 1) + @" WriteAllBytes Fail");
+                        mp3path.Remove(i);
                         Console.WriteLine(@"> " + Str.str_download_fail + _url[i]);
                     }
                     finally
