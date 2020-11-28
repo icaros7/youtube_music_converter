@@ -84,4 +84,10 @@
     <data name="str_unavailable_stream" xml:space="preserve">
         <value>존재하지 않는 영상 : </value>
     </data>
+    <data name="str_success_video_task" xml:space="preserve">
+        <value>성공한 작업 수 : </value>
+    </data>
+    <data name="str_task_video" xml:space="preserve">
+        <value>다운로드 작업</value>
+    </data>
 </root>

@@ -214,11 +214,29 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 성공한 작업 수 : .
+        /// </summary>
+        internal static string str_success_video_task {
+            get {
+                return ResourceManager.GetString("str_success_video_task", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 타겟 파일 : .
         /// </summary>
         internal static string str_target {
             get {
                 return ResourceManager.GetString("str_target", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 다운로드 작업.
+        /// </summary>
+        internal static string str_task_video {
+            get {
+                return ResourceManager.GetString("str_task_video", resourceCulture);
             }
         }
         

@@ -115,12 +115,12 @@ namespace Youtube_Music_Converter
             try
             {
                 Console.WriteLine(@"-----------------------------");
+                Console.WriteLine(Str.str_task_video);
                 Console.WriteLine();
                 Console.WriteLine(Str.str_start);
-                log.Info(@">>> Total Task : " + _url.Length);
+                log.Info(@">>> Total Video Task : " + _url.Length);
                 Console.WriteLine(Str.str_total_task + _url.Length);
                 Console.WriteLine();
-                Console.WriteLine(@"-----------------------------");
 
                 var yt = YouTube.Default;
                 for (int i = 0; i < _url.Length; i++)
@@ -164,18 +164,17 @@ namespace Youtube_Music_Converter
                 log.Error(@">> GetVideo Start Fail");
                 
                 Console.WriteLine(e);
-                Console.WriteLine(@"Press any key to continue...");
-                Console.ReadKey();
-                
                 return "Exception";
             }
 
-            log.Info(@">>> Total Task End");
+            log.Info(@">>> Total Video Task End");
 
             log.Info(@">> GetVideo Start Success");
             log.Info(@"");
-            Console.WriteLine(@"-----------------------------" + "\n");
+            Console.WriteLine();
+            Console.WriteLine(Str.str_success_video_task + mp3path.Count);
             Console.WriteLine(Str.str_end);
+            Console.WriteLine(@"-----------------------------");
 
             return "Normal";
         }
