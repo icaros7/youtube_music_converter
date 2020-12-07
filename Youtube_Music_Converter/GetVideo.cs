@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using log4net;
@@ -10,9 +9,11 @@ namespace Youtube_Music_Converter
     public class GetVideo
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(Program));
+
+        private string[] _url;
+        public string Path;
+        private int SuccessCnt = 1;
         
-        public string[] _url;
-        private string path;
         
         public GetVideo()
         {
@@ -38,23 +39,22 @@ namespace Youtube_Music_Converter
 
             log.Info(@">>> Check args is full directory url");
             int isFull = args.IndexOf(":", StringComparison.Ordinal);
-            if (isFull == -1)
+            switch (isFull)
             {
-                log.Info(@">>>> Detected only file name");
-                path = System.Environment.CurrentDirectory + @"\" + args.Replace(@".txt", @"");
-            }
-            else if (isFull == 1)
-            {
-                log.Info(@">>>> Detected full directory url");
-                path = args.Replace(@".txt", @"");
-            }
-            else
-            {
-                log.Info(@">>> Detected unknown format");
-                Console.WriteLine(Str.str_no_args);
-                Console.WriteLine(Str.str_no_args_with);
-                log.Info(@">> GetVideo Initialized");
-                return "Wrong Args";
+                case -1:
+                    log.Info(@">>>> Detected only file name");
+                    Path = System.Environment.CurrentDirectory + @"\" + args.Replace(@".txt", @"");
+                    break;
+                case 1:
+                    log.Info(@">>>> Detected full directory url");
+                    Path = args.Replace(@".txt", @"");
+                    break;
+                default:
+                    log.Info(@">>> Detected unknown format");
+                    Console.WriteLine(Str.str_no_args);
+                    Console.WriteLine(Str.str_no_args_with);
+                    log.Info(@">> GetVideo Initialized");
+                    return "Wrong Args";
             }
             
             
@@ -62,7 +62,7 @@ namespace Youtube_Music_Converter
             log.Info(@">>> Check output dir exist");
             try
             {
-                DirectoryInfo dir = new DirectoryInfo(path);
+                DirectoryInfo dir = new DirectoryInfo(Path);
                 if (dir.Exists == false)
                 {
                     dir.Create();
@@ -76,7 +76,7 @@ namespace Youtube_Music_Converter
             catch (IOException e)
             {
                 log.Error(e);
-                log.Error(@">>>> Not supported type : " + path);
+                log.Error(@">>>> Not supported type : " + Path);
                 Console.WriteLine(Str.str_unknown_type);
                 return "Unknown Type";
             }
@@ -93,8 +93,6 @@ namespace Youtube_Music_Converter
             
             return "Normal";
         }
-
-        public List<int> mp3path = new List<int>();
 
         public void ShowQueue()
         {
@@ -135,28 +133,28 @@ namespace Youtube_Music_Converter
                         log.Info(@">>>>> Task " + (i + 1) + @" WriteAllBytes");
                         var vid = yt.GetVideo(_url[i]);
                         Console.WriteLine(Str.str_downloading + vid.FullName);
-                        File.WriteAllBytes(path + @"\" + vid.FullName, vid.GetBytes());
-                        mp3path.Add(i);
+                        File.WriteAllBytes(Path + @"\" + vid.FullName, vid.GetBytes());
+                        SuccessCnt++;
                     }
                     catch (ArgumentException e)
                     {
                         log.Error(e);
                         log.Error(@">>>>> Task " + (i + 1) + @" WriteAllBytes Fail. Not valid Youtube URL.");
-                        mp3path.Remove(i);
+                        SuccessCnt--;
                         Console.WriteLine(@"> " + Str.str_not_support_type + _url[i]);
                     }
                     catch (VideoLibrary.Exceptions.UnavailableStreamException e)
                     {
                         log.Error(e);
                         log.Error(@">>>>> Task" + (i + 1) + @" WriteAllBytes Fail. Video has unavailable stream");
-                        mp3path.Remove(i);
+                        SuccessCnt--;
                         Console.WriteLine(@"> " + Str.str_unavailable_stream + _url[i]);
                     }
                     catch (Exception e)
                     {
                         log.Error(e);
                         log.Error(@">>>>> Task " + (i + 1) + @" WriteAllBytes Fail");
-                        mp3path.Remove(i);
+                        SuccessCnt--;
                         Console.WriteLine(@"> " + Str.str_download_fail + _url[i]);
                     }
                     finally
@@ -179,9 +177,8 @@ namespace Youtube_Music_Converter
             log.Info(@">> GetVideo Start Success");
             log.Info(@"");
             Console.WriteLine();
-            Console.WriteLine(Str.str_success_video_task + mp3path.Count);
+            Console.WriteLine(Str.str_success_video_task + SuccessCnt);
             Console.WriteLine(Str.str_end);
-            Console.WriteLine(@"-----------------------------");
 
             return "Normal";
         }

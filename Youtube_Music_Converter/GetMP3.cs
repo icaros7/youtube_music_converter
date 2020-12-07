@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using log4net;
-using Xabe.FFmpeg;
 
 namespace Youtube_Music_Converter
 {
@@ -38,11 +35,7 @@ namespace Youtube_Music_Converter
                 {
                     log.Info(@">>>> Task " + (i + 1) + @" start");
 
-                    string output = Path.ChangeExtension(Path.GetTempFileName(), "mp3");
-                    var conversion = FFmpeg.Conversions.FromSnippet.ExtractAudio(_url[_successPath[i]], output);
-                    
-                    // TODO: Check out Xabe.FFmpeg document.
-                    // await conversion.Start();
+                    // TODO: GetMP3 main part
                 }
                 catch (Exception e)
                 {
