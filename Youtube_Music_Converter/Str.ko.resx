@@ -3,7 +3,7 @@
 <root>
     <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <xsd:element name="root" msdata:IsDataSet="true">
-            
+
         </xsd:element>
     </xsd:schema>
     <resheader name="resmimetype">
@@ -89,5 +89,17 @@
     </data>
     <data name="str_task_video" xml:space="preserve">
         <value>다운로드 작업</value>
+    </data>
+    <data name="str_detected_already_mp3" xml:space="preserve">
+        <value>이미 변환된 mp3 파일을 찾았습니다.</value>
+    </data>
+    <data name="str_converting" xml:space="preserve">
+        <value>변환중 : </value>
+    </data>
+    <data name="str_convert_fail" xml:space="preserve">
+        <value>변환 실패 : </value>
+    </data>
+    <data name="str_task_audio" xml:space="preserve">
+        <value>변환 작업</value>
     </data>
 </root>
