@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 using log4net;
@@ -11,7 +12,6 @@ namespace Youtube_Music_Converter
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(Program));
         private string[] _path;
-        public string Status;
         private int _successCnt = 0;
 
         public GetMP3()
@@ -28,13 +28,12 @@ namespace Youtube_Music_Converter
             log.Info(@">>>> Found " + _path.Length + @" Files");
             
             FFmpegDownloader.GetLatestVersion(FFmpegVersion.Full, Environment.CurrentDirectory);
-            FFmpeg.SetExecutablesPath(Environment.CurrentDirectory);
             
             log.Info(@">> GetMP3 initialized");
             log.Info(@"");
         }
 
-        public async Task<int> Convert()
+        public string Convert()
         {
             log.Info(@">> GetMP3 Convert");
 
@@ -55,14 +54,14 @@ namespace Youtube_Music_Converter
                     {
                         log.Info(@">>>> Task " + (i + 1) + @" start");
                         
-                        string output = Path.ChangeExtension(_path[i], "mp3");
+                        string _output = Path.ChangeExtension(_path[i], "mp3");
                         log.Info(@">>>>> Check exist already converted file");
-                        if (File.Exists(output))
+                        if (File.Exists(_output))
                         {
                             log.Info(@">>>>>> Detected MP3 File. Try to delete");
                             try
                             {
-                                File.Delete(output);
+                                File.Delete(_output);
                             }
                             catch (IOException e)
                             {
@@ -70,12 +69,37 @@ namespace Youtube_Music_Converter
                                 Console.WriteLine(@"File Busy");
                             }
                         }
-                        var conversion = await FFmpeg.Conversions.FromSnippet.ExtractAudio(_path[i], output);
-                        // Intentional Synchronous Task
-                        conversion.Start();
-                        
                         log.Info(@">>>>> Task " + (i + 1) + @" extractAudio");
-                        Console.WriteLine(Str.str_converting + Path.GetFileName(output));
+                        
+                        var ffmpegProcess = new Process();
+                        ffmpegProcess.StartInfo.UseShellExecute = false;
+                        ffmpegProcess.StartInfo.RedirectStandardInput = true;
+                        ffmpegProcess.StartInfo.RedirectStandardOutput = true;
+                        ffmpegProcess.StartInfo.RedirectStandardError = true;
+                        ffmpegProcess.StartInfo.CreateNoWindow = true;
+                        log.Info(_path[i]);
+                        log.Info(_output);
+                        ffmpegProcess.StartInfo.FileName = Environment.CurrentDirectory + @"\ffmpeg.exe";
+                        ffmpegProcess.StartInfo.Arguments = " -i " + "\""+ _path[i] + "\"" + " -vn -f mp3 -ab 320k " + "\"" + _output + "\"";
+                        log.Info(ffmpegProcess.StartInfo.Arguments.ToString());
+                        ffmpegProcess.Start();
+                        log.Info(@"Started");
+                        Console.WriteLine(Str.str_converting + Path.GetFileName(_output));
+                        // ffmpegProcess.StandardOutput.ReadToEnd();
+                        // log.Info(@"ReadToEnded");
+                        
+                        var outputmp3 = ffmpegProcess.StandardError.ReadToEnd();
+                        log.Info(@"output = ReadToEnded");
+                        ffmpegProcess.WaitForExit();
+                        log.Info(@"WaitforExited");
+                        if (!ffmpegProcess.HasExited)
+                        {
+                            log.Info(@"HasExited");
+                            ffmpegProcess.Kill();
+                            log.Info(@"Killed");
+                        }
+                        Console.WriteLine(outputmp3);
+                        
                         _successCnt++;
                     }
                     catch (Exception e)
@@ -83,7 +107,10 @@ namespace Youtube_Music_Converter
                         log.Error(e);
                         log.Error(@">>>> Task " + (i + 1) + @" fail");
                         Console.WriteLine(@"> " + Str.str_convert_fail + Path.GetFileName(_path[i]));
-                        _successCnt--;
+                        if (_successCnt > 0)
+                        {
+                            _successCnt--;
+                        }
                     }
                     finally
                     {
@@ -98,7 +125,7 @@ namespace Youtube_Music_Converter
                 log.Error(@">> GetMP3 Convert Fail");
                 
                 Console.WriteLine(Str.str_unknown);
-                Status = "Exception";
+                return "Exception";
             }
 
             log.Info(@">> GetMP3 Convert Success");
@@ -108,8 +135,7 @@ namespace Youtube_Music_Converter
             Console.WriteLine(Str.str_end);
             Console.WriteLine(@"-----------------------------");
             
-            Status = "Normal";
-            return 0;
+            return "Normal";
         }
     }
 }

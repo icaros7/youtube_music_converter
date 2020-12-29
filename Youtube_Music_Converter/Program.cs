@@ -46,9 +46,7 @@ namespace Youtube_Music_Converter
                     {
                         GetMP3 mp3 = new GetMP3();
                         mp3.Init(video.Path);
-                        // Intentional Synchronous Task
                         mp3.Convert();
-                        status = mp3.Status;
                         
                         init.Exit(status);
                     }
