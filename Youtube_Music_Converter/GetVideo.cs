@@ -43,7 +43,7 @@ namespace Youtube_Music_Converter
             {
                 case -1:
                     log.Info(@">>>> Detected only file name");
-                    Path = System.Environment.CurrentDirectory + @"\" + args.Replace(@".txt", @"");
+                    Path = System.IO.Path.Combine(Environment.CurrentDirectory, args.Replace(@".txt", @""));
                     break;
                 case 1:
                     log.Info(@">>>> Detected full directory url");
