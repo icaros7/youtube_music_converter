@@ -72,11 +72,9 @@ namespace Youtube_Music_Converter
                         ffmpegProcess.StartInfo.RedirectStandardOutput = true;
                         ffmpegProcess.StartInfo.RedirectStandardError = true;
                         ffmpegProcess.StartInfo.CreateNoWindow = true;
-                        log.Info(_path[i]);
-                        log.Info(_output);
-                        ffmpegProcess.StartInfo.FileName = Environment.CurrentDirectory + @"\ffmpeg.exe";
-                        ffmpegProcess.StartInfo.Arguments = " -i " + "\""+ _path[i] + "\"" + " -vn -f mp3 -ab 320k " + "\"" + _output + "\"";
-                        log.Info(ffmpegProcess.StartInfo.Arguments.ToString());
+                        log.Info(@">>>>> Output : " + _output);
+                        ffmpegProcess.StartInfo.FileName = Path.Combine(Environment.CurrentDirectory,Path.Combine("ffmpeg", "ffmpeg.exe"));
+                        ffmpegProcess.StartInfo.Arguments = "-loglevel panic -i " + "\""+ _path[i] + "\"" + " -vn -f mp3 -ab 320k " + "\"" + _output + "\"";
                         ffmpegProcess.Start();
                         log.Info(@">>>>> ffmpeg process start");
                         Console.WriteLine(Str.str_converting + Path.GetFileName(_output));
@@ -88,7 +86,18 @@ namespace Youtube_Music_Converter
                         {
                             log.Info(@">>>>> ffmpeg Exited");
                             ffmpegProcess.Kill();
-                            log.Info(@"Killed");
+                            log.Info(@">>>>> ffmpeg Killed");
+                            log.Info(@">>>> Try delete mp4");
+
+                            try
+                            {
+                                File.Delete(_path[i]);
+                            }
+                            catch (Exception e)
+                            {
+                                log.Error(e);
+                                log.Error(@">>>>> Failed to delete " + _path[i]);
+                            }
                         }
                         _successCnt++;
                     }
