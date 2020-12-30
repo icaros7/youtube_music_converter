@@ -43,7 +43,7 @@ namespace Youtube_Music_Converter
             {
                 case -1:
                     log.Info(@">>>> Detected only file name");
-                    Path = System.Environment.CurrentDirectory + @"\" + args.Replace(@".txt", @"");
+                    Path = System.IO.Path.Combine(Environment.CurrentDirectory, args.Replace(@".txt", @""));
                     break;
                 case 1:
                     log.Info(@">>>> Detected full directory url");
@@ -140,21 +140,30 @@ namespace Youtube_Music_Converter
                     {
                         log.Error(e);
                         log.Error(@">>>>> Task " + (i + 1) + @" WriteAllBytes Fail. Not valid Youtube URL.");
-                        SuccessCnt--;
+                        if (SuccessCnt > 0)
+                        {
+                            SuccessCnt--;
+                        }
                         Console.WriteLine(@"> " + Str.str_not_support_type + _url[i]);
                     }
                     catch (VideoLibrary.Exceptions.UnavailableStreamException e)
                     {
                         log.Error(e);
                         log.Error(@">>>>> Task" + (i + 1) + @" WriteAllBytes Fail. Video has unavailable stream");
-                        SuccessCnt--;
+                        if (SuccessCnt > 0)
+                        {
+                            SuccessCnt--;
+                        }
                         Console.WriteLine(@"> " + Str.str_unavailable_stream + _url[i]);
                     }
                     catch (Exception e)
                     {
                         log.Error(e);
                         log.Error(@">>>>> Task " + (i + 1) + @" WriteAllBytes Fail");
-                        SuccessCnt--;
+                        if (SuccessCnt > 0)
+                        {
+                            SuccessCnt--;
+                        }
                         Console.WriteLine(@"> " + Str.str_download_fail + _url[i]);
                     }
                     finally

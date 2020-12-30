@@ -61,6 +61,33 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Convert Fail : .
+        /// </summary>
+        internal static string str_convert_fail {
+            get {
+                return ResourceManager.GetString("str_convert_fail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Converting : .
+        /// </summary>
+        internal static string str_converting {
+            get {
+                return ResourceManager.GetString("str_converting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detected already conveted mp3 files..
+        /// </summary>
+        internal static string str_detected_already_mp3 {
+            get {
+                return ResourceManager.GetString("str_detected_already_mp3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Download Fail : .
         /// </summary>
         internal static string str_download_fail {
@@ -228,6 +255,15 @@ namespace Youtube_Music_Converter {
         internal static string str_target {
             get {
                 return ResourceManager.GetString("str_target", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Converting Task.
+        /// </summary>
+        internal static string str_task_audio {
+            get {
+                return ResourceManager.GetString("str_task_audio", resourceCulture);
             }
         }
         

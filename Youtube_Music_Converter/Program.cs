@@ -44,7 +44,9 @@ namespace Youtube_Music_Converter
                     status = video.Start();
                     if (status == "Normal")
                     {
-                        // TODO: GetMP3 here
+                        GetMP3 mp3 = new GetMP3();
+                        mp3.Init(video.Path);
+                        status = mp3.Convert();
                         
                         init.Exit(status);
                     }
