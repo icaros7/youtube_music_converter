@@ -1,9 +1,9 @@
 # Youtube Music Converter
 [VideoLibrary](https://github.com/omansak/libvideo)를 활용한 Youtube 음원 변환기 입니다.  
-[Xabe.FFmpeg](https://ffmpeg.xabe.net/)를 통하여 최종적으로 Youtube 영상을 [MP3](https://ko.wikipedia.org/wiki/MP3) 확장자로 저장 합니다.
+[FFmpeg.Shared](https://www.nuget.org/packages/FFmpeg.Shared)를 통하여 최종적으로 Youtube 영상을 [MP3](https://ko.wikipedia.org/wiki/MP3) 확장자로 저장 합니다.
 
 It's a Youtube music converter that using [VideoLibrary](https://github.com/omansak/libvideo).  
-Finaly, You can save Youtube video to [MP3](https://en.wikipedia.org/wiki/MP3) extension via [Xabe.FFmpeg](https://ffmpeg.xabe.net/)
+Finaly, You can save Youtube video to [MP3](https://en.wikipedia.org/wiki/MP3) extension via [FFmpeg.Shared](https://www.nuget.org/packages/FFmpeg.Shared)
 
 ---
 
@@ -64,4 +64,4 @@ Youtube_Music_Converter.exe YOUR_QUEUE.txt
 ## 오픈소스 라이센스 / OPENSOURCE LICENSE
 - VideoLibarary - [홈페이지/Homepage](https://github.com/omansak/libvideo), [라이센스/License](https://github.com/omansak/libvideo/blob/master/LICENSE)
 - Apache log4net™ - [홈페이지/Homepage](https://logging.apache.org/log4net/index.html), [라이센스/License](http://www.apache.org/licenses/LICENSE-2.0.html)
-- Xabe.FFmpeg - [홈페이지/Homepage](https://ffmpeg.xabe.net/), [라이센스/License](https://ffmpeg.xabe.net/license.html)
+- FFmpeg.Shared - [홈페이지/Homepage](https://www.nuget.org/packages/FFmpeg.Shared), [라이센스/License](https://www.gnu.org/licenses/gpl-3.0.txt)

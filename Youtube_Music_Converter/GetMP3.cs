@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
-using System.Threading.Tasks;
 using log4net;
-using Xabe.FFmpeg;
-using Xabe.FFmpeg.Downloader;
 
 namespace Youtube_Music_Converter
 {
@@ -26,8 +23,6 @@ namespace Youtube_Music_Converter
             log.Info(@">>> Read downloaded video files");
             this._path = Directory.GetFiles(path, "*.mp4");
             log.Info(@">>>> Found " + _path.Length + @" Files");
-            
-            FFmpegDownloader.GetLatestVersion(FFmpegVersion.Full, Environment.CurrentDirectory);
             
             log.Info(@">> GetMP3 initialized");
             log.Info(@"");
@@ -85,9 +80,7 @@ namespace Youtube_Music_Converter
                         ffmpegProcess.Start();
                         log.Info(@"Started");
                         Console.WriteLine(Str.str_converting + Path.GetFileName(_output));
-                        // ffmpegProcess.StandardOutput.ReadToEnd();
-                        // log.Info(@"ReadToEnded");
-                        
+                        ffmpegProcess.StandardOutput.ReadToEnd();
                         var outputmp3 = ffmpegProcess.StandardError.ReadToEnd();
                         log.Info(@"output = ReadToEnded");
                         ffmpegProcess.WaitForExit();
