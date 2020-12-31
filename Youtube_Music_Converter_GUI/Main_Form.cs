@@ -8,12 +8,13 @@ namespace Youtube_Music_Converter_GUI
 {
     public partial class Form1 : Form
     {
-        private string buffer = "";
+        private string[] args;
         IniFile ini = new IniFile();
 
-        public Form1()
+        public Form1(string[] args)
         {
             InitializeComponent();
+            this.args = args;
         }
 
         private void LocalizationInit()
@@ -40,10 +41,18 @@ namespace Youtube_Music_Converter_GUI
         {
             LocalizationInit();
 
-            StartupUpdate();
-            if (check_Update.Checked == true)
+            if (check_Update.Checked){ btn_Update.PerformClick(); }
+
+            if (args.Length < 2)
             {
-                Update();
+                if (check_OpenatStartup.Checked)
+                {
+                    btn_Open.PerformClick();
+                }
+            }
+            else
+            {
+                Open(args[1]);
             }
         }
 
