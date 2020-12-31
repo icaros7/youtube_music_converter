@@ -62,7 +62,7 @@
             // 
             this.btn_Add.Location = new System.Drawing.Point(292, 12);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(65, 40);
+            this.btn_Add.Size = new System.Drawing.Size(78, 40);
             this.btn_Add.TabIndex = 2;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = true;
@@ -72,7 +72,7 @@
             // 
             this.btn_Remove.Location = new System.Drawing.Point(292, 104);
             this.btn_Remove.Name = "btn_Remove";
-            this.btn_Remove.Size = new System.Drawing.Size(65, 40);
+            this.btn_Remove.Size = new System.Drawing.Size(78, 40);
             this.btn_Remove.TabIndex = 3;
             this.btn_Remove.Text = "Remove";
             this.btn_Remove.UseVisualStyleBackColor = true;
@@ -82,7 +82,7 @@
             // 
             this.btn_New.Location = new System.Drawing.Point(292, 223);
             this.btn_New.Name = "btn_New";
-            this.btn_New.Size = new System.Drawing.Size(65, 40);
+            this.btn_New.Size = new System.Drawing.Size(78, 40);
             this.btn_New.TabIndex = 4;
             this.btn_New.Text = "New";
             this.btn_New.UseVisualStyleBackColor = true;
@@ -90,7 +90,7 @@
             // 
             // btn_Convert
             // 
-            this.btn_Convert.Location = new System.Drawing.Point(256, 282);
+            this.btn_Convert.Location = new System.Drawing.Point(162, 282);
             this.btn_Convert.Name = "btn_Convert";
             this.btn_Convert.Size = new System.Drawing.Size(101, 52);
             this.btn_Convert.TabIndex = 5;
@@ -99,7 +99,7 @@
             // 
             // btn_SaveConvert
             // 
-            this.btn_SaveConvert.Location = new System.Drawing.Point(149, 282);
+            this.btn_SaveConvert.Location = new System.Drawing.Point(269, 282);
             this.btn_SaveConvert.Name = "btn_SaveConvert";
             this.btn_SaveConvert.Size = new System.Drawing.Size(101, 52);
             this.btn_SaveConvert.TabIndex = 6;
@@ -111,7 +111,7 @@
             // 
             this.btn_Paste.Location = new System.Drawing.Point(292, 58);
             this.btn_Paste.Name = "btn_Paste";
-            this.btn_Paste.Size = new System.Drawing.Size(65, 40);
+            this.btn_Paste.Size = new System.Drawing.Size(78, 40);
             this.btn_Paste.TabIndex = 7;
             this.btn_Paste.Text = "Paste";
             this.btn_Paste.UseVisualStyleBackColor = true;
@@ -121,7 +121,7 @@
             // 
             this.btn_UnRemove.Location = new System.Drawing.Point(292, 150);
             this.btn_UnRemove.Name = "btn_UnRemove";
-            this.btn_UnRemove.Size = new System.Drawing.Size(65, 40);
+            this.btn_UnRemove.Size = new System.Drawing.Size(78, 40);
             this.btn_UnRemove.TabIndex = 8;
             this.btn_UnRemove.Text = "UnRemove";
             this.btn_UnRemove.UseVisualStyleBackColor = true;

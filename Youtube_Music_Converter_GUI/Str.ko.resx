@@ -12,10 +12,10 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="btn_Add" xml:space="preserve">
-        <value>추가하기</value>
+        <value>추가</value>
     </data>
-    <data name="btn_New" xml:space="preserve">
-        <value>새 리스트</value>
+    <data name="btn_Clear" xml:space="preserve">
+        <value>초기화</value>
     </data>
     <data name="btn_Remove" xml:space="preserve">
         <value>지우기</value>

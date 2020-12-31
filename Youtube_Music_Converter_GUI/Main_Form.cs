@@ -23,8 +23,9 @@ namespace Youtube_Music_Converter_GUI
         private void LocalizationInit()
         {
             btn_Add.Text = Str.btn_Add;
-            btn_New.Text = Str.btn_New;
+            btn_New.Text = Str.btn_Clear;
             btn_Remove.Text = Str.btn_Remove;
+            btn_SaveConvert.Text = Str.btn_SaveConvert;
         }
 
         public void StartupUpdate()

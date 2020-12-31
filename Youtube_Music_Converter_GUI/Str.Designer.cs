@@ -70,11 +70,20 @@ namespace Youtube_Music_Converter_GUI {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New List.
+        ///   Looks up a localized string similar to Clear.
         /// </summary>
-        internal static string btn_New {
+        internal static string btn_Clear {
             get {
-                return ResourceManager.GetString("btn_New", resourceCulture);
+                return ResourceManager.GetString("btn_Clear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exit.
+        /// </summary>
+        internal static string btn_Exit {
+            get {
+                return ResourceManager.GetString("btn_Exit", resourceCulture);
             }
         }
         
@@ -84,6 +93,42 @@ namespace Youtube_Music_Converter_GUI {
         internal static string btn_Remove {
             get {
                 return ResourceManager.GetString("btn_Remove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save &amp;&amp; Convert.
+        /// </summary>
+        internal static string btn_SaveConvert {
+            get {
+                return ResourceManager.GetString("btn_SaveConvert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UnRemove.
+        /// </summary>
+        internal static string btn_UnRemove {
+            get {
+                return ResourceManager.GetString("btn_UnRemove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update.
+        /// </summary>
+        internal static string btn_Update {
+            get {
+                return ResourceManager.GetString("btn_Update", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check update at startup.
+        /// </summary>
+        internal static string str_CheckUpdate {
+            get {
+                return ResourceManager.GetString("str_CheckUpdate", resourceCulture);
             }
         }
         

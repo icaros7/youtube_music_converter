@@ -21,8 +21,8 @@
     <data name="btn_Add" xml:space="preserve">
         <value>Add</value>
     </data>
-    <data name="btn_New" xml:space="preserve">
-        <value>New List</value>
+    <data name="btn_Clear" xml:space="preserve">
+        <value>Clear</value>
     </data>
     <data name="btn_Remove" xml:space="preserve">
         <value>Remove</value>
