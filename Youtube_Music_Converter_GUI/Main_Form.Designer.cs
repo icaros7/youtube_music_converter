@@ -38,6 +38,9 @@
             this.btn_SaveConvert = new System.Windows.Forms.Button();
             this.btn_Paste = new System.Windows.Forms.Button();
             this.btn_UnRemove = new System.Windows.Forms.Button();
+            this.btn_Exit = new System.Windows.Forms.Button();
+            this.check_Update = new System.Windows.Forms.CheckBox();
+            this.btn_Update = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -124,11 +127,44 @@
             this.btn_UnRemove.UseVisualStyleBackColor = true;
             this.btn_UnRemove.Click += new System.EventHandler(this.btn_UnRemove_Click);
             // 
+            // btn_Exit
+            // 
+            this.btn_Exit.Location = new System.Drawing.Point(12, 292);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(54, 42);
+            this.btn_Exit.TabIndex = 10;
+            this.btn_Exit.Text = "Exit";
+            this.btn_Exit.UseVisualStyleBackColor = true;
+            // 
+            // check_Update
+            // 
+            this.check_Update.Checked = true;
+            this.check_Update.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.check_Update.Location = new System.Drawing.Point(12, 269);
+            this.check_Update.Name = "check_Update";
+            this.check_Update.Size = new System.Drawing.Size(144, 17);
+            this.check_Update.TabIndex = 11;
+            this.check_Update.Text = "Check Update at startup";
+            this.check_Update.UseVisualStyleBackColor = true;
+            this.check_Update.CheckedChanged += new System.EventHandler(this.check_Update_CheckedChanged);
+            // 
+            // btn_Update
+            // 
+            this.btn_Update.Location = new System.Drawing.Point(72, 292);
+            this.btn_Update.Name = "btn_Update";
+            this.btn_Update.Size = new System.Drawing.Size(54, 42);
+            this.btn_Update.TabIndex = 12;
+            this.btn_Update.Text = "Update";
+            this.btn_Update.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 348);
+            this.ClientSize = new System.Drawing.Size(382, 348);
+            this.Controls.Add(this.btn_Update);
+            this.Controls.Add(this.check_Update);
+            this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.btn_UnRemove);
             this.Controls.Add(this.btn_Paste);
             this.Controls.Add(this.btn_SaveConvert);
@@ -147,6 +183,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button btn_Update;
+        private System.Windows.Forms.CheckBox check_Update;
+
+        private System.Windows.Forms.Button btn_Exit;
 
         private System.Windows.Forms.Button btn_UnRemove;
 

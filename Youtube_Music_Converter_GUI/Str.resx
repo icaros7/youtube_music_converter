@@ -30,4 +30,19 @@
     <data name="str_Clear" xml:space="preserve">
         <value>Are you sure to clear the list?</value>
     </data>
+    <data name="btn_UnRemove" xml:space="preserve">
+        <value>UnRemove</value>
+    </data>
+    <data name="btn_SaveConvert" xml:space="preserve">
+        <value>Save &amp;&amp; Convert</value>
+    </data>
+    <data name="str_CheckUpdate" xml:space="preserve">
+        <value>Check update at startup</value>
+    </data>
+    <data name="btn_Exit" xml:space="preserve">
+        <value>Exit</value>
+    </data>
+    <data name="btn_Update" xml:space="preserve">
+        <value>Update</value>
+    </data>
 </root>

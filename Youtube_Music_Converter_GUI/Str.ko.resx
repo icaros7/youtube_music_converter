@@ -23,4 +23,19 @@
     <data name="str_Clear" xml:space="preserve">
         <value>리스트를 모두 지우는게 확실합니까?</value>
     </data>
+    <data name="btn_UnRemove" xml:space="preserve">
+        <value>지우기 취소</value>
+    </data>
+    <data name="btn_SaveConvert" xml:space="preserve">
+        <value>저장 및 변환</value>
+    </data>
+    <data name="str_CheckUpdate" xml:space="preserve">
+        <value>시작 시 업데이트 확인</value>
+    </data>
+    <data name="btn_Update" xml:space="preserve">
+        <value>업데이트</value>
+    </data>
+    <data name="btn_Exit" xml:space="preserve">
+        <value>종료</value>
+    </data>
 </root>

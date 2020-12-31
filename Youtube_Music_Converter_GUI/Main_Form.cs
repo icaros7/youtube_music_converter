@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ namespace Youtube_Music_Converter_GUI
     public partial class Form1 : Form
     {
         private string buffer = "";
+        IniFile ini = new IniFile();
+
         public Form1()
         {
             InitializeComponent();
@@ -24,9 +27,27 @@ namespace Youtube_Music_Converter_GUI
             btn_Remove.Text = Str.btn_Remove;
         }
 
+        public void StartupUpdate()
+        {
+            if (!File.Exists("Youtube_Music_Converter_GUI.ini")) return;
+            ini.Load("Youtube_Music_Converter_GUI.ini");
+            check_Update.Checked = ini["Settings"]["CheckUpdateAtStartup"].ToBool();
+        }
+
+        private int Update()
+        {
+            return 0;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             LocalizationInit();
+
+            StartupUpdate();
+            if (check_Update.Checked == true)
+            {
+                Update();
+            }
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
@@ -86,6 +107,19 @@ namespace Youtube_Music_Converter_GUI
                 listBox1.Items.Add(buffer);
                 buffer = "";
                 this.ActiveControl = textBox1;
+            }
+        }
+
+        private void check_Update_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                ini["Settings"]["CheckUpdateAtStartup"] = check_Update.Checked;
+                ini.Save("Youtube_Music_Converter_GUI.ini");
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
