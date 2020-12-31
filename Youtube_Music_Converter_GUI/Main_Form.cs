@@ -210,7 +210,25 @@ namespace Youtube_Music_Converter_GUI
 
         private void check_Update_CheckedChanged(object sender, EventArgs e)
         {
-            if (buffer != "")
+            try
+            {
+                ini["Settings"]["CheckUpdateAtStartup"] = check_Update.Checked;
+                ini.Save("Youtube_Music_Converter_GUI.ini");
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.ToString(), Str.str_Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void check_OpenatStartup_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                ini["Settings"]["OpenAtStartup"] = check_OpenatStartup.Checked;
+                ini.Save("Youtube_Music_Converter_GUI.ini");
+            }
+            catch (Exception exception)
             {
                 MessageBox.Show(exception.ToString(), Str.str_Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
