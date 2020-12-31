@@ -77,6 +77,40 @@ namespace Youtube_Music_Converter_GUI
             }  
         }
 
+        private void Open(string path)
+        {
+            object[] lines = File.ReadAllLines(path);
+            listBox1.Items.AddRange(lines);
+            buffer.Items.Clear();
+            this.ActiveControl = textBox1;
+        }
+
+        private void OpenDialog()
+        {
+            string path = "";
+                using (OpenFileDialog openFileDialog = new OpenFileDialog())
+                {
+                    openFileDialog.Filter = Str.str_TextFilter;
+                    openFileDialog.FilterIndex = 2;
+                    openFileDialog.RestoreDirectory = true;
+                     
+                    if (openFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        //Get the path of specified file
+                        path = openFileDialog.FileName;
+                    }
+                    else
+                    {
+                        this.ActiveControl = textBox1;
+                    }
+                }
+                     
+                if (path != "")
+                {
+                    Open(path);
+                }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             LocalizationInit();
@@ -146,7 +180,24 @@ namespace Youtube_Music_Converter_GUI
             btn_Add.PerformClick();
         }
 
-        private void btn_UnRemove_Click(object sender, EventArgs e)
+        private void btn_Open_Click(object sender, EventArgs e)
+        {
+            if (listBox1.Items.Count > 0)
+            {
+                DialogResult result = MessageBox.Show(Str.str_SureOpen, @"Youtube Music Converter",
+                    MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                if (result != DialogResult.OK) return;
+            }
+            listBox1.Items.Clear();
+            OpenDialog();
+        }
+
+        private void btn_AddOpen_Click(object sender, EventArgs e)
+        {
+            OpenDialog();
+        }
+
+        private void check_Update_CheckedChanged(object sender, EventArgs e)
         {
             if (buffer != "")
             {
@@ -154,17 +205,29 @@ namespace Youtube_Music_Converter_GUI
             }
         }
 
-        private void check_Update_CheckedChanged(object sender, EventArgs e)
+        private void openListFromTextFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                ini["Settings"]["CheckUpdateAtStartup"] = check_Update.Checked;
-                ini.Save("Youtube_Music_Converter_GUI.ini");
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            btn_Open.PerformClick();
+        }
+
+        private void addListFromTextFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btn_AddOpen.PerformClick();
+        }
+
+        private void newListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           btn_New.PerformClick(); 
+        }
+
+        private void englishToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ChangeLanguage("en-US");
+        }
+
+        private void 한국어ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           ChangeLanguage("ko-KR"); 
         }
     }
 }
