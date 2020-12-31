@@ -45,16 +45,36 @@ namespace Youtube_Music_Converter_GUI
 
         }
 
-        public void StartupUpdate()
+        private void IniLoad()
         {
             if (!File.Exists("Youtube_Music_Converter_GUI.ini")) return;
             ini.Load("Youtube_Music_Converter_GUI.ini");
+            
             check_Update.Checked = ini["Settings"]["CheckUpdateAtStartup"].ToBool();
+            check_OpenatStartup.Checked = ini["Settings"]["OpenAtStartup"].ToBool();
+            try
+            {
+                Thread.CurrentThread.CurrentUICulture =
+                    CultureInfo.GetCultureInfo(ini["Settings"]["Language"].ToString());
+            }
+            catch (ArgumentNullException){}
         }
 
-        private int Update()
+        private void ChangeLanguage(string culture)
         {
-            return 0;
+            try
+            {
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(culture);
+                ini["Settings"]["Language"] = culture;
+                ini.Save("Youtube_Music_Converter_GUI.ini");
+                LocalizationInit();
+                MessageBox.Show(Str.str_ChangedLanguage + "\r" + Str.str_ChangedLanguage_Next, Str.str_AppName, MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.ToString(), Str.str_Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }  
         }
 
         private void Form1_Load(object sender, EventArgs e)
