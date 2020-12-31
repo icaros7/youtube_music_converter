@@ -146,16 +146,26 @@ namespace Youtube_Music_Converter_GUI
             {
                 if (listBox1.SelectedItem != null)
                 {
-                    buffer = listBox1.SelectedItem.ToString();
+                    buffer.Items.Add(listBox1.Items[listBox1.SelectedIndex]);
                     listBox1.Items.RemoveAt(listBox1.SelectedIndex);
                     this.ActiveControl = textBox1;
                 }
                 else
                 {
-                    buffer = listBox1.Items[^1].ToString();
+                    buffer.Items.Add(listBox1.Items[^1]!);
                     listBox1.Items.RemoveAt(listBox1.Items.Count - 1);
                     this.ActiveControl = textBox1;
                 }
+            }
+        }
+
+        private void btn_UnRemove_Click(object sender, EventArgs e)
+        {
+            if (buffer.Items.Count != 0)
+            {
+                listBox1.Items.Add(buffer.Items[^1]);
+                buffer.Items.RemoveAt(buffer.Items.Count - 1);
+                this.ActiveControl = textBox1;
             }
         }
 
