@@ -113,6 +113,7 @@ namespace Youtube_Music_Converter_GUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            IniLoad();
             LocalizationInit();
 
             if (check_Update.Checked){ btn_Update.PerformClick(); }
