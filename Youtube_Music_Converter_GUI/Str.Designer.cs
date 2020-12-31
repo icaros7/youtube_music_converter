@@ -59,5 +59,41 @@ namespace Youtube_Music_Converter_GUI {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add.
+        /// </summary>
+        internal static string btn_Add {
+            get {
+                return ResourceManager.GetString("btn_Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New List.
+        /// </summary>
+        internal static string btn_New {
+            get {
+                return ResourceManager.GetString("btn_New", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove.
+        /// </summary>
+        internal static string btn_Remove {
+            get {
+                return ResourceManager.GetString("btn_Remove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to clear the list?.
+        /// </summary>
+        internal static string str_Clear {
+            get {
+                return ResourceManager.GetString("str_Clear", resourceCulture);
+            }
+        }
     }
 }
