@@ -38,4 +38,52 @@
     <data name="btn_Exit" xml:space="preserve">
         <value>종료</value>
     </data>
+    <data name="str_ChangedLanguage" xml:space="preserve">
+        <value>선택한 언어로 성공적으로 변경 되었습니다!</value>
+    </data>
+    <data name="str_ChangedLanguage_Next" xml:space="preserve">
+        <value>설정이 저장 되었습니다.</value>
+    </data>
+    <data name="btn_Open" xml:space="preserve">
+        <value>열기</value>
+    </data>
+    <data name="btn_Paste" xml:space="preserve">
+        <value>붙여넣기</value>
+    </data>
+    <data name="strip_File" xml:space="preserve">
+        <value>파일</value>
+    </data>
+    <data name="strip_Help" xml:space="preserve">
+        <value>도움말</value>
+    </data>
+    <data name="strip_Tutorial" xml:space="preserve">
+        <value>튜토리얼</value>
+    </data>
+    <data name="strip_ProjectGit" xml:space="preserve">
+        <value>프로젝트 Github</value>
+    </data>
+    <data name="strip_Feedback" xml:space="preserve">
+        <value>피드백 보내기</value>
+    </data>
+    <data name="str_OpenAtStartup" xml:space="preserve">
+        <value>항상 시작 시 파일 열기</value>
+    </data>
+    <data name="str_SureOpen" xml:space="preserve">
+        <value>정말 새로운 리스트를 여시겠습니까?</value>
+    </data>
+    <data name="btn_AddOpen" xml:space="preserve">
+        <value>불러오기</value>
+    </data>
+    <data name="btn_Convert" xml:space="preserve">
+        <value>변환</value>
+    </data>
+    <data name="str_Error" xml:space="preserve">
+        <value>에러</value>
+    </data>
+    <data name="str_TextFilter" xml:space="preserve">
+        <value>텍스트 파일 (*.txt)|*.txt</value>
+    </data>
+    <data name="str_AppName" xml:space="preserve">
+        <value>유튜브 음원 변환기</value>
+    </data>
 </root>

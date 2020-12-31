@@ -70,6 +70,15 @@ namespace Youtube_Music_Converter_GUI {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Load.
+        /// </summary>
+        internal static string btn_AddOpen {
+            get {
+                return ResourceManager.GetString("btn_AddOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Clear.
         /// </summary>
         internal static string btn_Clear {
@@ -79,11 +88,38 @@ namespace Youtube_Music_Converter_GUI {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Convert.
+        /// </summary>
+        internal static string btn_Convert {
+            get {
+                return ResourceManager.GetString("btn_Convert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exit.
         /// </summary>
         internal static string btn_Exit {
             get {
                 return ResourceManager.GetString("btn_Exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open.
+        /// </summary>
+        internal static string btn_Open {
+            get {
+                return ResourceManager.GetString("btn_Open", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paste.
+        /// </summary>
+        internal static string btn_Paste {
+            get {
+                return ResourceManager.GetString("btn_Paste", resourceCulture);
             }
         }
         
@@ -124,6 +160,33 @@ namespace Youtube_Music_Converter_GUI {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Youtube Music Converter.
+        /// </summary>
+        internal static string str_AppName {
+            get {
+                return ResourceManager.GetString("str_AppName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully changed select language!.
+        /// </summary>
+        internal static string str_ChangedLanguage {
+            get {
+                return ResourceManager.GetString("str_ChangedLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This setting has been saved..
+        /// </summary>
+        internal static string str_ChangedLanguage_Next {
+            get {
+                return ResourceManager.GetString("str_ChangedLanguage_Next", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check update at startup.
         /// </summary>
         internal static string str_CheckUpdate {
@@ -138,6 +201,87 @@ namespace Youtube_Music_Converter_GUI {
         internal static string str_Clear {
             get {
                 return ResourceManager.GetString("str_Clear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        internal static string str_Error {
+            get {
+                return ResourceManager.GetString("str_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Always open file at startup.
+        /// </summary>
+        internal static string str_OpenAtStartup {
+            get {
+                return ResourceManager.GetString("str_OpenAtStartup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to open new list?.
+        /// </summary>
+        internal static string str_SureOpen {
+            get {
+                return ResourceManager.GetString("str_SureOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text files (*.txt)|*.txt.
+        /// </summary>
+        internal static string str_TextFilter {
+            get {
+                return ResourceManager.GetString("str_TextFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Send Feedback.
+        /// </summary>
+        internal static string strip_Feedback {
+            get {
+                return ResourceManager.GetString("strip_Feedback", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File.
+        /// </summary>
+        internal static string strip_File {
+            get {
+                return ResourceManager.GetString("strip_File", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Help.
+        /// </summary>
+        internal static string strip_Help {
+            get {
+                return ResourceManager.GetString("strip_Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Project Github.
+        /// </summary>
+        internal static string strip_ProjectGit {
+            get {
+                return ResourceManager.GetString("strip_ProjectGit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tutorial.
+        /// </summary>
+        internal static string strip_Tutorial {
+            get {
+                return ResourceManager.GetString("strip_Tutorial", resourceCulture);
             }
         }
     }

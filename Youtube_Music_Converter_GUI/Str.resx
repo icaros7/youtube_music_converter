@@ -45,4 +45,52 @@
     <data name="btn_Update" xml:space="preserve">
         <value>Update</value>
     </data>
+    <data name="str_ChangedLanguage" xml:space="preserve">
+        <value>Successfully changed select language!</value>
+    </data>
+    <data name="str_ChangedLanguage_Next" xml:space="preserve">
+        <value>This setting has been saved.</value>
+    </data>
+    <data name="btn_Open" xml:space="preserve">
+        <value>Open</value>
+    </data>
+    <data name="btn_Paste" xml:space="preserve">
+        <value>Paste</value>
+    </data>
+    <data name="strip_File" xml:space="preserve">
+        <value>File</value>
+    </data>
+    <data name="strip_Help" xml:space="preserve">
+        <value>Help</value>
+    </data>
+    <data name="strip_Tutorial" xml:space="preserve">
+        <value>Tutorial</value>
+    </data>
+    <data name="strip_ProjectGit" xml:space="preserve">
+        <value>Project Github</value>
+    </data>
+    <data name="strip_Feedback" xml:space="preserve">
+        <value>Send Feedback</value>
+    </data>
+    <data name="str_OpenAtStartup" xml:space="preserve">l
+        <value>Always open file at startup</value>
+    </data>
+    <data name="str_SureOpen" xml:space="preserve">
+        <value>Are you sure to open new list?</value>
+    </data>
+    <data name="btn_AddOpen" xml:space="preserve">
+        <value>Load</value>
+    </data>
+    <data name="btn_Convert" xml:space="preserve">
+        <value>Convert</value>
+    </data>
+    <data name="str_Error" xml:space="preserve">
+        <value>Error</value>
+    </data>
+    <data name="str_TextFilter" xml:space="preserve">
+        <value>Text files (*.txt)|*.txt</value>
+    </data>
+    <data name="str_AppName" xml:space="preserve">
+        <value>Youtube Music Converter</value>
+    </data>
 </root>

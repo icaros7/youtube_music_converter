@@ -23,6 +23,26 @@ namespace Youtube_Music_Converter_GUI
             btn_New.Text = Str.btn_Clear;
             btn_Remove.Text = Str.btn_Remove;
             btn_SaveConvert.Text = Str.btn_SaveConvert;
+            btn_Exit.Text = Str.btn_Exit;
+            btn_Open.Text = Str.btn_Open;
+            btn_AddOpen.Text = Str.btn_AddOpen;
+            btn_Paste.Text = Str.btn_Paste;
+            btn_Convert.Text = Str.btn_Convert;
+            btn_UnRemove.Text = Str.btn_UnRemove;
+            btn_Update.Text = Str.btn_Update;
+            check_Update.Text = Str.str_CheckUpdate;
+            check_OpenatStartup.Text = Str.str_OpenAtStartup;
+            exitToolStripMenuItem.Text = Str.btn_Exit;
+            updateToolStripMenuItem.Text = Str.btn_Update;
+            newListToolStripMenuItem.Text = Str.btn_Clear;
+            openListFromTextFileToolStripMenuItem.Text = Str.btn_Open;
+            fileToolStripMenuItem.Text = Str.strip_File;
+            helpToolStripMenuItem.Text = Str.strip_Help;
+            mailToToolStripMenuItem.Text = Str.strip_Feedback;
+            tutorialToolStripMenuItem.Text = Str.strip_Tutorial;
+            projectGithubToolStripMenuItem.Text = Str.strip_ProjectGit;
+            addListFromTextFileToolStripMenuItem.Text = Str.btn_AddOpen;
+
         }
 
         public void StartupUpdate()
@@ -110,9 +130,7 @@ namespace Youtube_Music_Converter_GUI
         {
             if (buffer != "")
             {
-                listBox1.Items.Add(buffer);
-                buffer = "";
-                this.ActiveControl = textBox1;
+                MessageBox.Show(exception.ToString(), Str.str_Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
