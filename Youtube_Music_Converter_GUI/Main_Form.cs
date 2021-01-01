@@ -58,6 +58,17 @@ namespace Youtube_Music_Converter_GUI
             projectGithubToolStripMenuItem.Text = Str.strip_ProjectGit;
             addListFromTextFileToolStripMenuItem.Text = Str.btn_AddOpen;
 
+            if (Equals(Thread.CurrentThread.CurrentUICulture, CultureInfo.GetCultureInfo("ko-KR")))
+            {
+                englishToolStripMenuItem.Checked = false;
+                한국어ToolStripMenuItem.Checked = true;
+            }
+            else
+            {
+                englishToolStripMenuItem.Checked = true;
+                한국어ToolStripMenuItem.Checked = false;
+            }
+
         }
 
         private void IniLoad()
