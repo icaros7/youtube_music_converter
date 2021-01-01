@@ -214,6 +214,15 @@ namespace Youtube_Music_Converter_GUI {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure to exit Youtube Music Converter?.
+        /// </summary>
+        internal static string str_Exit_Sure {
+            get {
+                return ResourceManager.GetString("str_Exit_Sure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Always open file at startup.
         /// </summary>
         internal static string str_OpenAtStartup {

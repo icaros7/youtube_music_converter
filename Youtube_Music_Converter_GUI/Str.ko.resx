@@ -86,4 +86,7 @@
     <data name="str_AppName" xml:space="preserve">
         <value>유튜브 음원 변환기</value>
     </data>
+    <data name="str_Exit_Sure" xml:space="preserve">
+        <value>정말 유튜브 음원 변환기를 종료하시겠습니까?</value>
+    </data>
 </root>

@@ -15,6 +15,21 @@ namespace Youtube_Music_Converter_GUI
         {
             InitializeComponent();
             this.args = args;
+            FormClosing += new FormClosingEventHandler(Close);
+        }
+
+        private void Close(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show(Str.str_Exit_Sure, Str.str_AppName, MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Warning);
+            if (result == DialogResult.OK)
+            {
+                return;
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
 
         private void LocalizationInit()
@@ -257,6 +272,16 @@ namespace Youtube_Music_Converter_GUI
         private void 한국어ToolStripMenuItem_Click(object sender, EventArgs e)
         {
            ChangeLanguage("ko-KR"); 
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btn_Exit.PerformClick();
         }
     }
 }

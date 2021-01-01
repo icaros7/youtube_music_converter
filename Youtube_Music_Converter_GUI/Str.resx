@@ -93,4 +93,7 @@
     <data name="str_AppName" xml:space="preserve">
         <value>Youtube Music Converter</value>
     </data>
+    <data name="str_Exit_Sure" xml:space="preserve">
+        <value>Are you sure to exit Youtube Music Converter?</value>
+    </data>
 </root>
