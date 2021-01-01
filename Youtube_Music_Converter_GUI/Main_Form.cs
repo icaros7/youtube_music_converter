@@ -121,28 +121,27 @@ namespace Youtube_Music_Converter_GUI
 
         private void OpenDialog()
         {
-            string path = "";
-                using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            var path = "";
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = Str.str_TextFilter;
+                openFileDialog.FilterIndex = 1;
+                openFileDialog.RestoreDirectory = true;
+                 
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    openFileDialog.Filter = Str.str_TextFilter;
-                    openFileDialog.FilterIndex = 2;
-                    openFileDialog.RestoreDirectory = true;
-                     
-                    if (openFileDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        //Get the path of specified file
-                        path = openFileDialog.FileName;
-                    }
-                    else
-                    {
-                        this.ActiveControl = textBox1;
-                    }
+                    path = openFileDialog.FileName;
                 }
-                     
-                if (path != "")
+                else
                 {
-                    Open(path);
+                    ActiveControl = textBox1;
                 }
+            }
+                 
+            if (path != "")
+            {
+                Open(path);
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -165,7 +164,7 @@ namespace Youtube_Music_Converter_GUI
             {
                 listBox1.Items.Add(textBox1.Text);
                 textBox1.Text = "";
-                this.ActiveControl = textBox1;
+                ActiveControl = textBox1;
             }
         }
 
@@ -177,13 +176,13 @@ namespace Youtube_Music_Converter_GUI
                 {
                     buffer.Items.Add(listBox1.Items[listBox1.SelectedIndex]);
                     listBox1.Items.RemoveAt(listBox1.SelectedIndex);
-                    this.ActiveControl = textBox1;
+                    ActiveControl = textBox1;
                 }
                 else
                 {
                     buffer.Items.Add(listBox1.Items[^1]!);
                     listBox1.Items.RemoveAt(listBox1.Items.Count - 1);
-                    this.ActiveControl = textBox1;
+                    ActiveControl = textBox1;
                 }
             }
         }
@@ -194,7 +193,7 @@ namespace Youtube_Music_Converter_GUI
             {
                 listBox1.Items.Add(buffer.Items[^1]);
                 buffer.Items.RemoveAt(buffer.Items.Count - 1);
-                this.ActiveControl = textBox1;
+                ActiveControl = textBox1;
             }
         }
 
@@ -205,7 +204,7 @@ namespace Youtube_Music_Converter_GUI
             if (clear == DialogResult.Yes)
             {
                 listBox1.Items.Clear();
-                this.ActiveControl = textBox1;
+                ActiveControl = textBox1;
             }
         }
 
