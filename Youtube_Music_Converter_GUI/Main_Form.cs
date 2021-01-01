@@ -15,7 +15,7 @@ namespace Youtube_Music_Converter_GUI
         {
             InitializeComponent();
             this.args = args;
-            FormClosing += new FormClosingEventHandler(Close);
+            FormClosing += new FormClosingEventHandler(Close); // FormClosingEventHandler를 통한 폼 클로징 이벤트 제어 문
         }
 
         private void Close(object sender, FormClosingEventArgs e)
@@ -28,12 +28,13 @@ namespace Youtube_Music_Converter_GUI
             }
             else
             {
-                e.Cancel = true;
+                e.Cancel = true; // Cancel FormClosingEvent
             }
         }
 
         private void LocalizationInit()
         {
+            // Main_Form 버튼
             btn_Add.Text = Str.btn_Add;
             btn_New.Text = Str.btn_Clear;
             btn_Remove.Text = Str.btn_Remove;
@@ -45,8 +46,12 @@ namespace Youtube_Music_Converter_GUI
             btn_Convert.Text = Str.btn_Convert;
             btn_UnRemove.Text = Str.btn_UnRemove;
             btn_Update.Text = Str.btn_Update;
+            
+            // Main_Form 체크박스
             check_Update.Text = Str.str_CheckUpdate;
             check_OpenatStartup.Text = Str.str_OpenAtStartup;
+            
+            // Main_Form ToolStripMenuItem
             exitToolStripMenuItem.Text = Str.btn_Exit;
             updateToolStripMenuItem.Text = Str.btn_Update;
             newListToolStripMenuItem.Text = Str.btn_Clear;
@@ -58,6 +63,7 @@ namespace Youtube_Music_Converter_GUI
             projectGithubToolStripMenuItem.Text = Str.strip_ProjectGit;
             addListFromTextFileToolStripMenuItem.Text = Str.btn_AddOpen;
 
+            // 언어 변경 혹은 폼 첫 Init 시 Main_Form 언어 변경 ToolStripMenuItem 체크
             if (Equals(Thread.CurrentThread.CurrentUICulture, CultureInfo.GetCultureInfo("ko-KR")))
             {
                 englishToolStripMenuItem.Checked = false;
@@ -76,8 +82,8 @@ namespace Youtube_Music_Converter_GUI
             if (!File.Exists("Youtube_Music_Converter_GUI.ini")) return;
             ini.Load("Youtube_Music_Converter_GUI.ini");
             
-            check_Update.Checked = ini["Settings"]["CheckUpdateAtStartup"].ToBool();
-            check_OpenatStartup.Checked = ini["Settings"]["OpenAtStartup"].ToBool();
+            
+            // 정해진 값이 없는 경우를 위한 예외 처리
             try
             {
                 Thread.CurrentThread.CurrentUICulture =
@@ -108,7 +114,7 @@ namespace Youtube_Music_Converter_GUI
             object[] lines = File.ReadAllLines(path);
             listBox1.Items.AddRange(lines);
             buffer.Items.Clear();
-            this.ActiveControl = textBox1;
+            ActiveControl = textBox1;
         }
 
         private void OpenDialog()
@@ -146,15 +152,9 @@ namespace Youtube_Music_Converter_GUI
 
             if (args.Length < 2)
             {
-                if (check_OpenatStartup.Checked)
-                {
-                    btn_Open.PerformClick();
-                }
+                if (check_OpenatStartup.Checked){ btn_Open.PerformClick(); }
             }
-            else
-            {
-                Open(args[1]);
-            }
+            else { Open(args[1]); }
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
