@@ -12,7 +12,7 @@ namespace Youtube_Music_Converter
             {
                 init = new GetInit();
             }
-            else if(args[1] == @"GUI")
+            else if ((args.Length > 1) && (args[1] == @"GUI"))
             {
                 GUI = 0;
                 init = new GetInit(args[0], GUI);
