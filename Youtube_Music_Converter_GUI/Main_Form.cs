@@ -86,6 +86,8 @@ namespace Youtube_Music_Converter_GUI
             // 정해진 값이 없는 경우를 위한 예외 처리
             try
             {
+                check_OpenatStartup.Checked = ini["Settings"]["OpenAtStartup"].ToBool();
+                check_Update.Checked = ini["Settings"]["CheckUpdateAtStartup"].ToBool();
                 Thread.CurrentThread.CurrentUICulture =
                     CultureInfo.GetCultureInfo(ini["Settings"]["Language"].ToString());
             }
