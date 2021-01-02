@@ -277,7 +277,7 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Temp Text File.
+        ///   Looks up a localized string similar to Running in GUI Mode.
         /// </summary>
         internal static string str_temp_txt {
             get {

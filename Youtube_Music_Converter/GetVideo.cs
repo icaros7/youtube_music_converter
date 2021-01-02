@@ -36,7 +36,7 @@ namespace Youtube_Music_Converter
 
             if (args == @"Youtube_Music_Converter_tmp.txt")
             {
-                Console.WriteLine(Str.str_target + Str.str_temp_txt);
+                Console.WriteLine(Str.str_temp_txt);
             }
             else
             {

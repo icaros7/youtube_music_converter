@@ -103,6 +103,6 @@
         <value>변환 작업</value>
     </data>
     <data name="str_temp_txt" xml:space="preserve">
-        <value>임시 텍스트 파일</value>
+        <value>GUI 모드에서 실행 중</value>
     </data>
 </root>

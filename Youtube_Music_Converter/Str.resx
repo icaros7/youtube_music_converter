@@ -103,6 +103,6 @@
         <value>Converting Task</value>
     </data>
     <data name="str_temp_txt" xml:space="preserve">
-        <value>Temp Text File</value>
+        <value>Running in GUI Mode</value>
     </data>
 </root>
