@@ -21,7 +21,7 @@ namespace Youtube_Music_Converter
             log.Info(@">> GetMP3 initializing");
 
             log.Info(@">>> Read downloaded video files");
-            this._path = Directory.GetFiles(path, "*.mp4");
+            _path = Directory.GetFiles(path, "*.mp4");
             log.Info(@">>>> Found " + _path.Length + @" Files");
             
             log.Info(@">> GetMP3 initialized");
