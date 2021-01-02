@@ -1,10 +1,7 @@
 ﻿using System;
-using System.ComponentModel;
-using System.ComponentModel.Design.Serialization;
 using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
-using System.Timers;
 using System.Windows.Forms;
 
 namespace Youtube_Music_Converter_GUI
