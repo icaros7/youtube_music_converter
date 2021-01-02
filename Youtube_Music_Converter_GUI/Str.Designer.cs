@@ -124,6 +124,15 @@ namespace Youtube_Music_Converter_GUI {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Open folder.
+        /// </summary>
+        internal static string btn_OpenFolder {
+            get {
+                return ResourceManager.GetString("btn_OpenFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Paste.
         /// </summary>
         internal static string btn_Paste {
@@ -214,6 +223,15 @@ namespace Youtube_Music_Converter_GUI {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Converting is in progress. Do you want to exit anyway?.
+        /// </summary>
+        internal static string str_Converting_exit {
+            get {
+                return ResourceManager.GetString("str_Converting_exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
         internal static string str_Error {
@@ -232,11 +250,47 @@ namespace Youtube_Music_Converter_GUI {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Application will be exit..
+        /// </summary>
+        internal static string str_ExitApp {
+            get {
+                return ResourceManager.GetString("str_ExitApp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can&apos;t detacted Youtube_Music_Converter.exe . Are you want to set that path manually?.
+        /// </summary>
+        internal static string str_FindApp {
+            get {
+                return ResourceManager.GetString("str_FindApp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can&apos;t find output directory..
+        /// </summary>
+        internal static string str_no_dir {
+            get {
+                return ResourceManager.GetString("str_no_dir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Always open file at startup.
         /// </summary>
         internal static string str_OpenAtStartup {
             get {
                 return ResourceManager.GetString("str_OpenAtStartup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Output :.
+        /// </summary>
+        internal static string str_Output {
+            get {
+                return ResourceManager.GetString("str_Output", resourceCulture);
             }
         }
         
@@ -255,6 +309,15 @@ namespace Youtube_Music_Converter_GUI {
         internal static string str_TextFilter {
             get {
                 return ResourceManager.GetString("str_TextFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If wrong with task? Click here to end.
+        /// </summary>
+        internal static string str_wrong_task {
+            get {
+                return ResourceManager.GetString("str_wrong_task", resourceCulture);
             }
         }
         
