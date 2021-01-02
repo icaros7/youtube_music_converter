@@ -22,11 +22,7 @@ namespace Youtube_Music_Converter_GUI
         {
             DialogResult result = MessageBox.Show(Str.str_Exit_Sure, Str.str_AppName, MessageBoxButtons.OKCancel,
                 MessageBoxIcon.Warning);
-            if (result == DialogResult.OK)
-            {
-                return;
-            }
-            else
+            if (result != DialogResult.OK)
             {
                 e.Cancel = true; // Cancel FormClosingEvent
             }
@@ -204,6 +200,7 @@ namespace Youtube_Music_Converter_GUI
             if (clear == DialogResult.Yes)
             {
                 listBox1.Items.Clear();
+                buffer.Items.Clear();
                 ActiveControl = textBox1;
             }
         }
