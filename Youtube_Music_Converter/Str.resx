@@ -102,7 +102,4 @@
     <data name="str_task_audio" xml:space="preserve">
         <value>Converting Task</value>
     </data>
-    <data name="str_temp_txt" xml:space="preserve">
-        <value>Temp Text File</value>
-    </data>
 </root>
