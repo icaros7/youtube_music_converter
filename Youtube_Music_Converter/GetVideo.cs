@@ -34,7 +34,11 @@ namespace Youtube_Music_Converter
                 return "Wrong Args";
             }
 
-            if (args != @"Youtube_Music_Converter_tmp.txt")
+            if (args == @"Youtube_Music_Converter_tmp.txt")
+            {
+                Console.WriteLine(Str.str_target + Str.str_temp_txt);
+            }
+            else
             {
                 Console.WriteLine(Str.str_target + args);
             }
