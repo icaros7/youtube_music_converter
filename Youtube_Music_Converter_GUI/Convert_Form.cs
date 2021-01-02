@@ -119,6 +119,10 @@ namespace Youtube_Music_Converter_GUI
 
                     if (line == @"End of Program")
                     {
+                        if (output == @"Youtube_Music_Converter_tmp.txt")
+                        {
+                            File.Delete(@"Youtube_Music_Converter_tmp.txt");
+                        }
                         btn_Close.Enabled = true;
                         break;
                     }
