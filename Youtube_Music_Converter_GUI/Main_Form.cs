@@ -90,7 +90,7 @@ namespace Youtube_Music_Converter_GUI
             catch (ArgumentNullException){}
         }
 
-        private void ChangeLanguage(string culture)
+        private void ChangeLanguage(string culture) // 언어 변경 메서드
         {
             try
             {
@@ -190,7 +190,7 @@ namespace Youtube_Music_Converter_GUI
             else { Open(args[1]); }
         }
 
-        private void btn_Add_Click(object sender, EventArgs e)
+        private void btn_Add_Click(object sender, EventArgs e) // textBox1 로 부터 1행 씩 추가
         {
             if (textBox1.TextLength != 0)
             {
@@ -200,7 +200,7 @@ namespace Youtube_Music_Converter_GUI
             }
         }
 
-        private void btn_Remove_Click(object sender, EventArgs e)
+        private void btn_Remove_Click(object sender, EventArgs e) // listBox1 마지막 행 혹은 선택 행 제거
         {
             if (listBox1.Items.Count != 0)
             {
@@ -219,7 +219,7 @@ namespace Youtube_Music_Converter_GUI
             }
         }
 
-        private void btn_UnRemove_Click(object sender, EventArgs e)
+        private void btn_UnRemove_Click(object sender, EventArgs e) // 제거 시 buffer list를 통한 복구
         {
             if (buffer.Items.Count != 0)
             {
@@ -241,13 +241,9 @@ namespace Youtube_Music_Converter_GUI
             }
         }
 
-        private void btn_SaveConvert_Click(object sender, EventArgs e)
+        private void btn_Paste_Click(object sender, EventArgs e) // 클립보드로 부터 Text 읽기
         {
-        }
-
-        private void btn_Paste_Click(object sender, EventArgs e)
-        {
-            textBox1.Text = Clipboard.GetText();
+            textBox1.Text = Clipboard.GetText(); //TODO: URL 형식 값만 가져 올 수 있도록 수정
             btn_Add.PerformClick();
         }
 
