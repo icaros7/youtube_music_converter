@@ -66,14 +66,18 @@ namespace Youtube_Music_Converter
         public void Exit(string status)
         {
             log.Info(@"> Call App Exit (Status : " + status + @")");
-            if (GUI == 1)
+            if (GUI == 0)
+            {
+                Console.WriteLine(@"End of Program");
+            }
+            else
             {
                 Console.WriteLine(Str.str_press_key_exit);
                 Console.Read();
             }
             log.Info(@"==== App Exit ====");
             log.Info(@"");
-            System.Environment.Exit(0);
+            Environment.Exit(0);
         }
     }
 }
