@@ -96,4 +96,28 @@
     <data name="str_Exit_Sure" xml:space="preserve">
         <value>Are you sure to exit Youtube Music Converter?</value>
     </data>
+    <data name="str_Output" xml:space="preserve">
+        <value>Output :</value>
+    </data>
+    <data name="btn_OpenFolder" xml:space="preserve">
+        <value>Open folder</value>
+    </data>
+    <data name="btn_Close" xml:space="preserve">
+        <value>Close</value>
+    </data>
+    <data name="str_FindApp" xml:space="preserve">
+        <value>Can't detacted Youtube_Music_Converter.exe . Are you want to set that path manually?</value>
+    </data>
+    <data name="str_ExitApp" xml:space="preserve">
+        <value>Application will be exit.</value>
+    </data>
+    <data name="str_no_dir" xml:space="preserve">
+        <value>Can't find output directory.</value>
+    </data>
+    <data name="str_Converting_exit" xml:space="preserve">
+        <value>Converting is in progress. Do you want to exit anyway?</value>
+    </data>
+    <data name="str_wrong_task" xml:space="preserve">
+        <value>If wrong with task? Click here to end</value>
+    </data>
 </root>

@@ -89,4 +89,28 @@
     <data name="str_Exit_Sure" xml:space="preserve">
         <value>정말 유튜브 음원 변환기를 종료하시겠습니까?</value>
     </data>
+    <data name="str_Output" xml:space="preserve">
+        <value>출력 :</value>
+    </data>
+    <data name="btn_OpenFolder" xml:space="preserve">
+        <value>폴더 열기</value>
+    </data>
+    <data name="btn_Close" xml:space="preserve">
+        <value>닫기</value>
+    </data>
+    <data name="str_FindApp" xml:space="preserve">
+        <value>Youtube_Music_Converter.exe를 찾을 수 없습니다. 직접 경로를 설정 하시겠습니까?</value>
+    </data>
+    <data name="str_ExitApp" xml:space="preserve">
+        <value>앱이 종료됩니다.</value>
+    </data>
+    <data name="str_no_dir" xml:space="preserve">
+        <value>출력 디렉토리를 열 수 없습니다.</value>
+    </data>
+    <data name="str_Converting_exit" xml:space="preserve">
+        <value>변환 작업 중입니다. 그래도 종료하시겠습니까?</value>
+    </data>
+    <data name="str_wrong_task" xml:space="preserve">
+        <value>문제가 있나요? 여기를 눌러 종료 하세요.</value>
+    </data>
 </root>

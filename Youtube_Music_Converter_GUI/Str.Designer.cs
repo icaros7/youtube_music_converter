@@ -88,6 +88,15 @@ namespace Youtube_Music_Converter_GUI {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Close.
+        /// </summary>
+        internal static string btn_Close {
+            get {
+                return ResourceManager.GetString("btn_Close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Convert.
         /// </summary>
         internal static string btn_Convert {
