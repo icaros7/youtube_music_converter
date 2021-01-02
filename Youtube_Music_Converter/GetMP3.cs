@@ -73,7 +73,7 @@ namespace Youtube_Music_Converter
                         ffmpegProcess.StartInfo.RedirectStandardError = true;
                         ffmpegProcess.StartInfo.CreateNoWindow = true;
                         log.Info(@">>>>> Output : " + _output);
-                        ffmpegProcess.StartInfo.FileName = Path.Combine(Environment.CurrentDirectory,Path.Combine("ffmpeg", "ffmpeg.exe"));
+                        ffmpegProcess.StartInfo.FileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,Path.Combine("ffmpeg", "ffmpeg.exe"));
                         ffmpegProcess.StartInfo.Arguments = "-loglevel panic -i " + "\""+ _path[i] + "\"" + " -vn -f mp3 -ab 320k " + "\"" + _output + "\"";
                         ffmpegProcess.Start();
                         log.Info(@">>>>> ffmpeg process start");
