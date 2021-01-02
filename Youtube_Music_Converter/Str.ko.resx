@@ -102,4 +102,7 @@
     <data name="str_task_audio" xml:space="preserve">
         <value>변환 작업</value>
     </data>
+    <data name="str_temp_txt" xml:space="preserve">
+        <value>임시 텍스트 파일</value>
+    </data>
 </root>
