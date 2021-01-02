@@ -115,6 +115,42 @@ namespace Youtube_Music_Converter_GUI
             ActiveControl = textBox1;
         }
 
+        private string Save(int status)
+        {
+            if (status == 0) // Save & Convert
+            {
+                using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+                {
+                    saveFileDialog.Filter = Str.str_TextFilter;
+                    saveFileDialog.FilterIndex = 1;
+                    saveFileDialog.RestoreDirectory = true;
+
+                    while (true)
+                    {
+                        if (saveFileDialog.ShowDialog() != DialogResult.OK) continue;
+                        using var streamWriter = new StreamWriter(saveFileDialog.FileName, false);
+                        foreach (var item in listBox1.Items)
+                        {
+                            streamWriter.WriteLine(item.ToString());
+                        }
+                        break;
+                    }
+
+                    return saveFileDialog.FileNames.ToString();
+                }
+            }
+            else // Convert via temp text file
+            {
+                using var streamWriter = new StreamWriter(@"Youtube_Music_Converter_tmp.txt", false);
+                foreach (var item in listBox1.Items)
+                {
+                    streamWriter.WriteLine(item.ToString());
+                }
+
+                return @"Youtube_Music_Converter_tmp.txt";
+            }
+        }
+        
         private void OpenDialog()
         {
             var path = "";
@@ -230,6 +266,23 @@ namespace Youtube_Music_Converter_GUI
         private void btn_AddOpen_Click(object sender, EventArgs e)
         {
             OpenDialog();
+        }
+
+        private void btn_Convert_Click(object sender, EventArgs e)
+        {
+            Convert_Form convertForm = new Convert_Form(Save(1));
+            convertForm.ShowDialog();
+        }
+
+        private void btn_SaveConvert_Click(object sender, EventArgs e)
+        {
+            Convert_Form convertForm = new Convert_Form(Save(0));
+            convertForm.ShowDialog();
+        }
+
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+            //TODO: Update
         }
 
         private void check_Update_CheckedChanged(object sender, EventArgs e)

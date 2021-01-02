@@ -123,6 +123,7 @@
             this.btn_Convert.TabIndex = 5;
             this.btn_Convert.Text = "Convert";
             this.btn_Convert.UseVisualStyleBackColor = true;
+            this.btn_Convert.Click += new System.EventHandler(this.btn_Convert_Click);
             // 
             // btn_SaveConvert
             // 
