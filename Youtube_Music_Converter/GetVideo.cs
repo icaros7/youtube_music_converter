@@ -12,7 +12,7 @@ namespace Youtube_Music_Converter
 
         private string[] _url;
         public string Path;
-        private int SuccessCnt = 1;
+        private int SuccessCnt = 0;
         
         
         public GetVideo()
@@ -131,10 +131,10 @@ namespace Youtube_Music_Converter
                     try
                     {
                         log.Info(@">>>>> Task " + (i + 1) + @" WriteAllBytes");
+                        SuccessCnt++;
                         var vid = yt.GetVideo(_url[i]);
                         Console.WriteLine(Str.str_downloading + vid.FullName);
                         File.WriteAllBytes(Path + @"\" + vid.FullName, vid.GetBytes());
-                        SuccessCnt++;
                     }
                     catch (ArgumentException e)
                     {
