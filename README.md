@@ -7,18 +7,18 @@ Finaly, You can save Youtube video to [MP3](https://en.wikipedia.org/wiki/MP3) e
 
 ---
 
-### 지원 환경 / Support Enviroment
-#### 요구 사항
+## 지원 환경 / Support Enviroment
+### 요구 사항
 - [.Net Core 3.1 이상 Runtime](https://dotnet.microsoft.com/download/dotnet-core)
-#### Requirements
+### Requirements
 - [.Net Core more than 3.1 Runtime](https://dotnet.microsoft.com/download/dotnet-core)
 
-#### 지원 언어 / Support Language
+### 지원 언어 / Support Language
 - English
 - 한국어 (Korean)
 
 ## 사용법 (한국어 / Korean)
-#### CUI
+### CUI
 1. 큐를 위한 빈 텍스트 파일을 만드세요.
 2. 해당 파일 내에 VideoLibraray가 지원하는 형식의 주소 (예: Youtube)를 개행을 통해 구분하여 작성 합니다.
 3. 해당 txt 파일을 실행 파일에 드래그앤드롭 하거나 아래 명령어 예시를 통하여 실행합니다.
@@ -34,9 +34,12 @@ Youtube_Music_Converter.exe 사용자_큐.txt
 </pre>
 4. 사용자 큐 텍스트 파일과 이름이 같은 폴더 내에 다운로드가 시작 됩니다.
 
-#### ~GUI~
-~추가 예정~
-
+### GUI
+![스크린샷](https://github.com/icaros7/youtube_music_converter/blob/gui_win_form/Image/preview_Korean.png?raw=true)
+- URL을 입력하여 직접 추가
+- 클립보드의 내용을 붙여넣기 버튼을 통해 추가
+- 텍스트 파일 불러오기
+- 텍스트 파일 드레그앤드롭 으로 열기
 
 ---
 ## How to use (English)
