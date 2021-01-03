@@ -58,7 +58,7 @@ namespace Youtube_Music_Converter_GUI
             }
             else
             {
-#if DEBUG // 디버그 모드 시 (솔루션 빌드 환경 시 ) Youtube_Music_Converter 프로젝트 Debug 앱 실행 하도록 설정
+        #if DEBUG // 디버그 모드 시 (솔루션 빌드 환경 시 ) Youtube_Music_Converter 프로젝트 Debug 앱 실행 하도록 설정
                 if (File.Exists(
                     "..\\..\\..\\..\\Youtube_Music_Converter\\bin\\Debug\\netcoreapp3.1\\Youtube_Music_Converter.exe"))
                 {
@@ -68,7 +68,7 @@ namespace Youtube_Music_Converter_GUI
                 }
                 else
                 {
-#endif
+        #endif
                     // Youtube_Music_Converter.exe 를 찾을 수 없는 경우 수동 설정
                     DialogResult result = MessageBox.Show(Str.str_FindApp, Str.str_AppName, MessageBoxButtons.YesNo,
                         MessageBoxIcon.Exclamation);
@@ -92,9 +92,9 @@ namespace Youtube_Music_Converter_GUI
                     {
                         NoApp();
                     }
-#if DEBUG // 디버그 모드 시 (솔루션 빌드 환경 시 ) Youtube_Music_Converter 프로젝트 Debug 앱 실행 하도록 설정
+        #if DEBUG // 디버그 모드 시 (솔루션 빌드 환경 시 ) Youtube_Music_Converter 프로젝트 Debug 앱 실행 하도록 설정
                 }
-#endif
+        #endif
             }
 
             var ymc = new Process
@@ -171,13 +171,11 @@ namespace Youtube_Music_Converter_GUI
             }
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) // 작업 중단
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) // ffmpeg 작업 중단
         {
-            Process[] ymc = Process.GetProcessesByName(@"Youtube_Music_Converter.exe");
-            if (ymc.Length > 0)
-            {
-                //TODO: 작업 중단 기능 추가
-            }
+            if (progressBar1.Value == 100) return;
+            Process.Start(@"taskkill.exe", @"-f -im ffmpeg.exe");
+            MessageBox.Show(Str.str_killed, Str.str_AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
