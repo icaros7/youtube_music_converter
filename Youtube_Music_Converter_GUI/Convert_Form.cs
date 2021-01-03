@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -10,6 +11,9 @@ namespace Youtube_Music_Converter_GUI
     {
         private string output;
         private string path;
+        private int Task_Num = 0;
+        private int cur_pos = 100;
+        private int cur_end = -1;
 
         public Convert_Form(string output)
         {
@@ -34,6 +38,38 @@ namespace Youtube_Music_Converter_GUI
             }
         }
 
+        private void ProgressView(string line, int i)
+        {
+            if (Regex.IsMatch(line, @".\d") && line.IndexOf(@":", StringComparison.Ordinal) == 8)
+            {
+                Task_Num = Int32.Parse(Regex.Replace(line, @"[^0-9]", ""));
+                cur_pos = i + 3;
+                cur_end = cur_pos + Task_Num;
+                if (progressBar1.Value > 1)
+                {
+                    progressSet(50);
+                    linkLabel1.Visible = true;
+                }
+            }
+
+            if (i < cur_end && i >= cur_pos)
+            {
+                progressAdd(50/Task_Num);
+            }
+        }
+
+        private void progressAdd(int prog)
+        {
+            progressBar1.Value += prog;
+            ProgressPercent.Text = progressBar1.Value.ToString();
+        }
+
+        private void progressSet(int prog)
+        {
+            progressBar1.Value = prog;
+            ProgressPercent.Text = prog.ToString();
+        }
+
         private void Localization()
         {
             Text = Str.str_AppName;
@@ -52,6 +88,7 @@ namespace Youtube_Music_Converter_GUI
 
         private async void Convert()
         {
+            int i = 1;
             if (File.Exists("Youtube_Music_Converter.exe"))
             {
                 path = Environment.CurrentDirectory;
@@ -115,8 +152,8 @@ namespace Youtube_Music_Converter_GUI
                 while (!ymc.StandardOutput.EndOfStream)
                 {
                     string line = ymc.StandardOutput.ReadLine();
-                    listBox1.TopIndex = listBox1.Items.Count - 1;
 
+                    ProgressView(line, i);
                     if (line == @"End of Program")
                     {
                         if (output == @"Youtube_Music_Converter_tmp.txt")
@@ -124,19 +161,15 @@ namespace Youtube_Music_Converter_GUI
                             File.Delete(@"Youtube_Music_Converter_tmp.txt");
                         }
                         btn_Close.Enabled = true;
+                        btn_OpenFolder.Enabled = true;
+                        linkLabel1.Visible = false;
+                        progressSet(100);
                         break;
                     }
                     
                     listBox1.Items.Add(line);
-                    
-                    if (line == @"-----------------------------") //TODO: 작업 수 기반 프로그레스바 개편
-                    {
-                        progressBar1.Value += 20;
-                        ProgressPercent.Text = (Int32.Parse(ProgressPercent.Text) + 20).ToString();
-                    
-                        if (progressBar1.Value >= 60){ linkLabel1.Visible=true; }
-                        if (progressBar1.Value == 100){ btn_OpenFolder.Enabled = true; }
-                    }
+                    listBox1.TopIndex = listBox1.Items.Count -1;
+                    i++;
                 }
             });
 
