@@ -1,4 +1,6 @@
-﻿namespace Youtube_Music_Converter_GUI
+﻿using System;
+
+namespace Youtube_Music_Converter_GUI
 {
     partial class Form1
     {
@@ -290,18 +292,21 @@
             this.tutorialToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
             this.tutorialToolStripMenuItem.Size = new System.Drawing.Size(222, 34);
             this.tutorialToolStripMenuItem.Text = "Tutorial";
+            this.tutorialToolStripMenuItem.Click += new System.EventHandler(this.tutorialToolStripMenuItem_Click);
             // 
             // projectGithubToolStripMenuItem
             // 
             this.projectGithubToolStripMenuItem.Name = "projectGithubToolStripMenuItem";
             this.projectGithubToolStripMenuItem.Size = new System.Drawing.Size(222, 34);
             this.projectGithubToolStripMenuItem.Text = "Project Github";
+            this.projectGithubToolStripMenuItem.Click += new EventHandler(this.projectGithubToolStripMenuItem_Click);
             // 
             // mailToToolStripMenuItem
             // 
             this.mailToToolStripMenuItem.Name = "mailToToolStripMenuItem";
             this.mailToToolStripMenuItem.Size = new System.Drawing.Size(222, 34);
             this.mailToToolStripMenuItem.Text = "Mail to...";
+            this.mailToToolStripMenuItem.Click += new System.EventHandler(this.mailToToolStripMenuItem_Click);
             // 
             // languageToolStripMenuItem
             // 

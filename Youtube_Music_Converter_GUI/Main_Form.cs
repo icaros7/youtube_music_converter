@@ -391,5 +391,20 @@ namespace Youtube_Music_Converter_GUI
         {
             btn_Exit.PerformClick();
         }
+
+        private void tutorialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenBrowser(@"https://github.com/icaros7/youtube_music_converter/blob/main/README.md");
+        }
+
+        private void projectGithubToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenBrowser(@"https://github.com/icaros7/youtube_music_converter");
+        }
+
+        private void mailToToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenBrowser(@"mailto:hominlab@gmail.com");
+        }
     }
 }
