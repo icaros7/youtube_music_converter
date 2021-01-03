@@ -84,10 +84,10 @@
         <value>텍스트 파일 (*.txt)|*.txt</value>
     </data>
     <data name="str_AppName" xml:space="preserve">
-        <value>유튜브 음원 변환기</value>
+        <value>유튜브 음악 변환기</value>
     </data>
     <data name="str_Exit_Sure" xml:space="preserve">
-        <value>정말 유튜브 음원 변환기를 종료하시겠습니까?</value>
+        <value>정말 유튜브 음악 변환기를 종료하시겠습니까?</value>
     </data>
     <data name="str_Output" xml:space="preserve">
         <value>출력 :</value>
@@ -112,5 +112,11 @@
     </data>
     <data name="str_wrong_task" xml:space="preserve">
         <value>문제가 있나요? 여기를 눌러 종료 하세요.</value>
+    </data>
+    <data name="str_no_list" xml:space="preserve">
+        <value>작업 목록이 비었습니다.</value>
+    </data>
+    <data name="str_killed" xml:space="preserve">
+        <value>작업이 중단 되었습니다. 다음 작업이 있다면 재시도 합니다.</value>
     </data>
 </root>
