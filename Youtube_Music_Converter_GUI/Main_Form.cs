@@ -287,7 +287,11 @@ namespace Youtube_Music_Converter_GUI
 
         private void btn_Paste_Click(object sender, EventArgs e) // 클립보드로 부터 Text 읽기
         {
-            textBox1.Text = Clipboard.GetText(); //TODO: URL 형식 값만 가져 올 수 있도록 수정
+            Uri uriResult;
+            bool result = Uri.TryCreate(Clipboard.GetText(), UriKind.Absolute, out uriResult) 
+                          && (uriResult.Scheme == Uri.UriSchemeHttp || uriResult.Scheme == Uri.UriSchemeHttps);
+            if (!result) return;
+            textBox1.Text = Clipboard.GetText();
             btn_Add.PerformClick();
         }
 
