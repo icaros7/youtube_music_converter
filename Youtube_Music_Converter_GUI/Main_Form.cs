@@ -30,6 +30,8 @@ namespace Youtube_Music_Converter_GUI
 
         private void LocalizationInit()
         {
+            Text = Str.str_AppName;
+            
             // Main_Form 버튼
             btn_Add.Text = Str.btn_Add;
             btn_New.Text = Str.btn_Clear;
