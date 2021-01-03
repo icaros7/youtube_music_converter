@@ -268,11 +268,29 @@ namespace Youtube_Music_Converter_GUI {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Task was interrupted. If exist next task, will be re try.
+        /// </summary>
+        internal static string str_killed {
+            get {
+                return ResourceManager.GetString("str_killed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Can&apos;t find output directory..
         /// </summary>
         internal static string str_no_dir {
             get {
                 return ResourceManager.GetString("str_no_dir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Task List is empty.
+        /// </summary>
+        internal static string str_no_list {
+            get {
+                return ResourceManager.GetString("str_no_list", resourceCulture);
             }
         }
         

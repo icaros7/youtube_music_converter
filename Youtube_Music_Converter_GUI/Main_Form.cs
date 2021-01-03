@@ -176,6 +176,17 @@ namespace Youtube_Music_Converter_GUI
             }
         }
 
+        private bool CheckEmpty()
+        {
+            if (listBox1.Items.Count == 0)
+            {
+                MessageBox.Show(Str.str_no_list, Str.str_AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             IniLoad();
@@ -266,14 +277,20 @@ namespace Youtube_Music_Converter_GUI
 
         private void btn_Convert_Click(object sender, EventArgs e)
         {
-            Convert_Form convertForm = new Convert_Form(Save(1));
-            convertForm.ShowDialog();
+            if (CheckEmpty())
+            {
+                Convert_Form convertForm = new Convert_Form(Save(1));
+                convertForm.ShowDialog();
+            }
         }
 
         private void btn_SaveConvert_Click(object sender, EventArgs e)
         {
-            Convert_Form convertForm = new Convert_Form(Save(0));
-            convertForm.ShowDialog();
+            if (CheckEmpty())
+            {
+                Convert_Form convertForm = new Convert_Form(Save(0));
+                convertForm.ShowDialog();
+            }
         }
 
         private void btn_Update_Click(object sender, EventArgs e)

@@ -120,4 +120,10 @@
     <data name="str_wrong_task" xml:space="preserve">
         <value>If wrong with task? Click here to end</value>
     </data>
+    <data name="str_no_list" xml:space="preserve">
+        <value>Task List is empty</value>
+    </data>
+    <data name="str_killed" xml:space="preserve">
+        <value>Task was interrupted. If exist next task, will be re try</value>
+    </data>
 </root>
