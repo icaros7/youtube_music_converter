@@ -173,8 +173,7 @@ namespace Youtube_Music_Converter_GUI
             // 
             // check_Update
             // 
-            this.check_Update.Checked = true;
-            this.check_Update.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.check_Update.Enabled = false;
             this.check_Update.Location = new System.Drawing.Point(22, 459);
             this.check_Update.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.check_Update.Name = "check_Update";
@@ -299,7 +298,7 @@ namespace Youtube_Music_Converter_GUI
             this.projectGithubToolStripMenuItem.Name = "projectGithubToolStripMenuItem";
             this.projectGithubToolStripMenuItem.Size = new System.Drawing.Size(222, 34);
             this.projectGithubToolStripMenuItem.Text = "Project Github";
-            this.projectGithubToolStripMenuItem.Click += new EventHandler(this.projectGithubToolStripMenuItem_Click);
+            this.projectGithubToolStripMenuItem.Click += new System.EventHandler(this.projectGithubToolStripMenuItem_Click);
             // 
             // mailToToolStripMenuItem
             // 
