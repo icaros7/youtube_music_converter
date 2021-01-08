@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Mime;
 using System.Reflection;
 using log4net;
 
@@ -8,20 +9,21 @@ namespace Youtube_Music_Converter
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(Program));
         private string args;
+        private int GUI = 1;
         private String version = Assembly.GetExecutingAssembly().GetName().Version?.ToString();
 
         public GetInit()
         {
             log.Info(@"");
             log.Info(@"==== App Start ====");
-            this.args = null;
         }
-        public GetInit(string args)
+        public GetInit(string args, int gui)
         {
-            this.args = args;
-            
             log.Info(@"");
             log.Info(@"==== App Start ====");
+            
+            this.args = args;
+            GUI = gui;
         }
 
         public string Init()
@@ -30,6 +32,7 @@ namespace Youtube_Music_Converter
             log.Info(@"> App Initializing");
             log.Info(@">> argument : " + args);
             log.Info(@">> Version : " + version);
+            if (GUI == 0){ log.Info(@">> GUI Mode : 0"); }
 
             Console.WriteLine(Str.str_intro + @" - " + version);
             Console.WriteLine(@"Powered by iCAROS7.");
@@ -63,11 +66,18 @@ namespace Youtube_Music_Converter
         public void Exit(string status)
         {
             log.Info(@"> Call App Exit (Status : " + status + @")");
-            Console.WriteLine(Str.str_press_key_exit);
-            Console.Read();
+            if (GUI == 0)
+            {
+                Console.WriteLine(@"End of Program");
+            }
+            else
+            {
+                Console.WriteLine(Str.str_press_key_exit);
+                Console.Read();
+            }
             log.Info(@"==== App Exit ====");
             log.Info(@"");
-            System.Environment.Exit(0);
+            Environment.Exit(0);
         }
     }
 }

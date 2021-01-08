@@ -12,7 +12,7 @@ namespace Youtube_Music_Converter
 
         private string[] _url;
         public string Path;
-        private int SuccessCnt = 1;
+        private int SuccessCnt = 0;
         
         
         public GetVideo()
@@ -34,7 +34,14 @@ namespace Youtube_Music_Converter
                 return "Wrong Args";
             }
 
-            Console.WriteLine(Str.str_target + args);
+            if (args == @"Youtube_Music_Converter_tmp.txt")
+            {
+                Console.WriteLine(Str.str_temp_txt);
+            }
+            else
+            {
+                Console.WriteLine(Str.str_target + args);
+            }
             Console.WriteLine();
 
             log.Info(@">>> Check args is full directory url");
@@ -43,7 +50,9 @@ namespace Youtube_Music_Converter
             {
                 case -1:
                     log.Info(@">>>> Detected only file name");
-                    Path = System.IO.Path.Combine(Environment.CurrentDirectory, args.Replace(@".txt", @""));
+                    Path = (args == @"Youtube_Music_Converter_tmp.txt")
+                        ? System.IO.Path.Combine(Environment.CurrentDirectory, @"Output")
+                        : System.IO.Path.Combine(Environment.CurrentDirectory, args.Replace(@".txt", @""));
                     break;
                 case 1:
                     log.Info(@">>>> Detected full directory url");
@@ -131,10 +140,10 @@ namespace Youtube_Music_Converter
                     try
                     {
                         log.Info(@">>>>> Task " + (i + 1) + @" WriteAllBytes");
+                        SuccessCnt++;
                         var vid = yt.GetVideo(_url[i]);
                         Console.WriteLine(Str.str_downloading + vid.FullName);
                         File.WriteAllBytes(Path + @"\" + vid.FullName, vid.GetBytes());
-                        SuccessCnt++;
                     }
                     catch (ArgumentException e)
                     {

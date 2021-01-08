@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="btn_Add" xml:space="preserve">
+        <value>Add</value>
+    </data>
+    <data name="btn_Clear" xml:space="preserve">
+        <value>Clear</value>
+    </data>
+    <data name="btn_Remove" xml:space="preserve">
+        <value>Remove</value>
+    </data>
+    <data name="str_Clear" xml:space="preserve">
+        <value>Are you sure to clear the list?</value>
+    </data>
+    <data name="btn_UnRemove" xml:space="preserve">
+        <value>UnRemove</value>
+    </data>
+    <data name="btn_SaveConvert" xml:space="preserve">
+        <value>Save &amp;&amp; Convert</value>
+    </data>
+    <data name="str_CheckUpdate" xml:space="preserve">
+        <value>Check update at startup</value>
+    </data>
+    <data name="btn_Exit" xml:space="preserve">
+        <value>Exit</value>
+    </data>
+    <data name="btn_Update" xml:space="preserve">
+        <value>Update</value>
+    </data>
+    <data name="str_ChangedLanguage" xml:space="preserve">
+        <value>Successfully changed select language!</value>
+    </data>
+    <data name="str_ChangedLanguage_Next" xml:space="preserve">
+        <value>This setting has been saved.</value>
+    </data>
+    <data name="btn_Open" xml:space="preserve">
+        <value>Open</value>
+    </data>
+    <data name="btn_Paste" xml:space="preserve">
+        <value>Paste</value>
+    </data>
+    <data name="strip_File" xml:space="preserve">
+        <value>File</value>
+    </data>
+    <data name="strip_Help" xml:space="preserve">
+        <value>Help</value>
+    </data>
+    <data name="strip_Tutorial" xml:space="preserve">
+        <value>Tutorial</value>
+    </data>
+    <data name="strip_ProjectGit" xml:space="preserve">
+        <value>Project Github</value>
+    </data>
+    <data name="strip_Feedback" xml:space="preserve">
+        <value>Send Feedback</value>
+    </data>
+    <data name="str_OpenAtStartup" xml:space="preserve">l
+        <value>Always open file at startup</value>
+    </data>
+    <data name="str_SureOpen" xml:space="preserve">
+        <value>Are you sure to open new list?</value>
+    </data>
+    <data name="btn_AddOpen" xml:space="preserve">
+        <value>Load</value>
+    </data>
+    <data name="btn_Convert" xml:space="preserve">
+        <value>Convert</value>
+    </data>
+    <data name="str_Error" xml:space="preserve">
+        <value>Error</value>
+    </data>
+    <data name="str_TextFilter" xml:space="preserve">
+        <value>Text files (*.txt)|*.txt</value>
+    </data>
+    <data name="str_AppName" xml:space="preserve">
+        <value>Youtube Music Converter</value>
+    </data>
+    <data name="str_Exit_Sure" xml:space="preserve">
+        <value>Are you sure to exit Youtube Music Converter?</value>
+    </data>
+    <data name="str_Output" xml:space="preserve">
+        <value>Output :</value>
+    </data>
+    <data name="btn_OpenFolder" xml:space="preserve">
+        <value>Open folder</value>
+    </data>
+    <data name="btn_Close" xml:space="preserve">
+        <value>Close</value>
+    </data>
+    <data name="str_FindApp" xml:space="preserve">
+        <value>Can't detacted Youtube_Music_Converter.exe . Are you want to set that path manually?</value>
+    </data>
+    <data name="str_ExitApp" xml:space="preserve">
+        <value>Application will be exit.</value>
+    </data>
+    <data name="str_no_dir" xml:space="preserve">
+        <value>Can't find output directory.</value>
+    </data>
+    <data name="str_Converting_exit" xml:space="preserve">
+        <value>Converting is in progress. Do you want to exit anyway?</value>
+    </data>
+    <data name="str_wrong_task" xml:space="preserve">
+        <value>If wrong with task? Click here to end</value>
+    </data>
+    <data name="str_no_list" xml:space="preserve">
+        <value>Task List is empty</value>
+    </data>
+    <data name="str_killed" xml:space="preserve">
+        <value>Task was interrupted. If exist next task, will be re try</value>
+    </data>
+</root>

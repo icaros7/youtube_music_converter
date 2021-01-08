@@ -277,6 +277,15 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Running in GUI Mode.
+        /// </summary>
+        internal static string str_temp_txt {
+            get {
+                return ResourceManager.GetString("str_temp_txt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Number of Total Task : .
         /// </summary>
         internal static string str_total_task {

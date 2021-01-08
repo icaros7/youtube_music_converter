@@ -277,6 +277,15 @@ namespace Youtube_Music_Converter {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to GUI 모드에서 실행 중.
+        /// </summary>
+        internal static string str_temp_txt {
+            get {
+                return ResourceManager.GetString("str_temp_txt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 전체 작업 수 : .
         /// </summary>
         internal static string str_total_task {
