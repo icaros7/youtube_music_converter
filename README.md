@@ -41,7 +41,7 @@ Youtube_Music_Converter.exe 사용자_큐.txt
 4. 사용자 큐 텍스트 파일과 이름이 같은 폴더 내에 다운로드가 시작 됩니다.
 
 ### GUI
-1. <b>Youtube_Music_Converter_GUI.exe</b>를 실행합니다.
+1. <b>Youtube_Music_Converter_GUI.exe</b>를 실행합니다.   
 ![스크린샷](https://github.com/icaros7/youtube_music_converter/blob/gui_win_form/Image/preview_Korean.png?raw=true)
 2. 아래 방법 중 하나를 선택 하여 작업 리스트를 추가합니다.
     - 입력하여 직접 추가
@@ -79,7 +79,7 @@ Youtube_Music_Converter.exe YOUR_QUEUE.txt
 4. The download starts within a directory with the same name as the your queue text file.
 
 ### GUI
-1. Run <b>Youtube_Music_Converter_GUI.exe</b>
+1. Run <b>Youtube_Music_Converter_GUI.exe</b>   
 ![Screenshot](https://github.com/icaros7/youtube_music_converter/blob/gui_win_form/Image/preview_English.png?raw=true)
 2. Add task list via one of follow method
     - Add type self
