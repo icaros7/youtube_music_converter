@@ -185,6 +185,7 @@ namespace Youtube_Music_Converter_GUI
             // 
             // btn_Update
             // 
+            this.btn_Update.Enabled = false;
             this.btn_Update.Location = new System.Drawing.Point(132, 496);
             this.btn_Update.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btn_Update.Name = "btn_Update";
